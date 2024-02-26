@@ -1,0 +1,138 @@
+@media (max-width: 1200px){
+    body {
+        /* overflow-y: hidden; */
+        overflow-x: hidden;
+    }
+    #desktop-nav{
+        display: none;
+    }
+    /* modefied styles  */
+    #hamburger-nav {
+        position: relative;
+        display: flex; 
+        justify-content: space-between;
+        align-items: flex-start; 
+        padding: 0 20px; /* Adjust the padding as needed */
+    }
+    #hamburger-nav .logo {
+        position: absolute;
+        right: 10%;
+        color: white;
+        font-size: 30px;
+        order: 1; /* Move the logo to the first position */
+        position: relative;
+        right: 7%;
+    }
+    .menu-links > li .logo.open{
+        /* position: absolute;
+        right: 20%; */
+        display: none;
+    }
+    #hamburger-nav .hamburger-menu {
+        order: 2; /* Move the hamburger-menu to the second position */
+    }
+    /* new styles  */
+    .hamburger-menu , .logo {
+        position: relative; /* Ensure relative positioning for absolute positioning inside */
+        padding: 30px 20px;
+        display: inline-block;
+    }
+    
+    .hamburger-icon {
+        position: relative;
+        /* position: absolute; */
+        top: 6px; /* Adjust the top position as needed */
+        left: 10%; /* Adjust the right position as needed */
+        z-index: 2; /* Ensure the icon is above the menu */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 32px;
+        height: 25px;
+        cursor: pointer;
+    }
+    
+    .hamburger-icon span {
+        min-width: 100%;
+        min-height: 2px;
+        /* background-color: black; */
+        background-color: white;
+        transition: all 0.3 ease-in-out;
+        /* new style  */
+        display: inline-block;
+        /* position: absolute; */
+        background: #b69761;
+        border-radius: 3px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition-behavior: normal;
+        transition-duration: 0.25s;
+        transition-timing-function: ease-in-out;
+        transition-delay: 0s;
+        transition-property: all;
+    }
+    .menu-links {
+        z-index: 1;
+        overflow: hidden;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background: #1b0b05;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.4s all;
+        padding: 30px 20px;
+        transform: translate(100%, 0);
+        transition: 0.4s opacity, 0.4s left; /* Apply transition to opacity and left */
+    }
+    
+    .menu-links.open {
+        overflow: hidden;
+        opacity: 1;
+        visibility: visible;
+        transform: translate(0, 0);
+        max-height: 300px;
+    }
+    
+    .menu-links a {
+        display: block;
+        padding: 10px;
+        text-align: center;
+        font: 30px;
+        color: white;
+        text-decoration: none;
+        /* transition: all 0.3 ease-in-out; */
+    }
+    .menu-links li {
+        list-style: none;
+    }
+    
+    .hamburger-icon.open span:first-child {
+        transform: rotate(45deg) translate(10px , 5px );
+    }
+    .hamburger-icon.open span:nth-child(2) {
+        opacity: 0;
+    }
+    .hamburger-icon.open span:last-child {
+        transform: rotate(-45deg) translate(10px , -5px );
+    }
+    .hamburger-icon span:first-child {
+        transform: none;
+    }
+    .hamburger-icon span:first-child {
+        opacity: 1;
+    }
+    .hamburger-icon span:first-child {
+        transform: none;
+    }
+}
+
