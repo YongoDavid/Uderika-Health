@@ -186,6 +186,36 @@ button{
     margin-bottom: 45px;
 }
 
+/* HOME / SWIPER SECTION */
+.home__swiper{
+    margin: initial;
+}
+.home__container{
+    padding-top: 2rem;
+    row-gap: 2.5rem;
+}
+.home__data{
+    text-align: center;
+}
+/* .home__title {
+
+} */
+.home__description{
+    /* margin-bottom: 2rem; */
+}
+.home__images{
+    display: grid;
+}
+.home__article , .home__img{
+    width: 220px;
+    transition: scale.4s;
+}
+.home__article {
+    scale: .8;
+}
+article > img {
+    z-index: 4;
+}
 /* services */
 .sc-services{
     padding-top: 179px;
@@ -237,6 +267,9 @@ button{
 .services-main-btn{
     margin-top: 69px;
 }
+/* CAUROSEL START HERE  */
+
+/* CAUROSEL END HERE  */
 
 /* grid block one */
 .grid-content .content-wrapper{
