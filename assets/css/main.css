@@ -225,8 +225,7 @@ button{
     scale: 1;
 }
 
-/* services */
-
+/* SERVICES */
 .sc-services{
     padding-top: 179px;
     padding-bottom: 115.9px;
@@ -241,15 +240,15 @@ button{
 .sc-services .content-wrapper .text{
     line-height: 1.6667;
 }
-.services-list{
+/* .services-list{
     margin-top: calc(83px - 18.5px);
     margin-bottom: -18.5px;
     margin-right: -18.5px;
     margin-left: -18.5px;
     display: flex;
     flex-wrap: wrap;
-}
-.services-item{
+} */
+/* .services-item{
     box-shadow: 10px 40px 50px 0px #e5e9f666;
     background-color: var(--clr-white);
     border-radius: 20px;
@@ -259,25 +258,62 @@ button{
     margin: 18.5px;
     width: calc(33.3333% - 37px);
     transition: var(--transition-default);
-}
-.services-item:hover{
+} */
+/* .services-item:hover{
     box-shadow:  rgba(0, 0, 0, 0.1) 0 20px 25px -5px, rgba(0, 0, 0, 0.04) 0 10px 10px -5px;
-}
-.services-item .item-title{
+} */
+/* .services-item .item-title{
     font-size: 24px;
     margin-top: 22px;
     margin-bottom: 12px;
-}
+} */
 .services-shape{
     position: absolute;
     z-index: -1;
     top: 290px;
     left: -70px;
 }
-.services-main-btn{
+/* .services-main-btn{
     margin-top: 69px;
-}
+} */
+
+/* FEATURED SECTION  */
 /* CAUROSEL START HERE  */
+.featured__card{
+    position: relative;
+    text-align: center;
+    background-color: aliceblue;
+    padding: 2rem;
+    overflow: hidden;
+    border: 2px solid grey;
+    transition: border .4s , background-color .4s;
+}
+.featured__img{
+    width: 150px;
+    margin: 0 auto .75rem ;
+}
+.featured__title{
+    font-size: 20px;
+    margin-bottom: .5rem;
+}
+.featured__prices{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: .75rem;
+    margin-bottom: 1.25rem;
+}
+.featured__price{
+    font-size: 15px;
+}
+.featured__card .button{
+    cursor: pointer;
+    background-color: #458ff6;
+    color: #fff;
+    padding: 5px;
+    border-radius: 15%;
+}
+/* FEATURED SWIPER  */
 
 /* CAUROSEL END HERE  */
 

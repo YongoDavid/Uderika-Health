@@ -55,4 +55,25 @@ let swiperHome = new Swiper('.home__swiper', {
         }
     }
   })
-   
+
+//   FEATURED SWIPER 
+let swiperFeatured = new Swiper('.featured__swiper', {
+    loop: true,
+    spaceBetween: 16,
+    grabCursor: true,
+    slidesPreview: 'auto',
+    centeredSlides: 'auto',
+
+    // autoplay:{
+    //     delay: 3000,
+    //     disableOnInteraction: false ,
+    // },
+
+    breakpoints: {
+        1150:{
+            slidesPreview: 4,
+            centeredSlides: false , 
+            
+        }
+    }
+  })   
