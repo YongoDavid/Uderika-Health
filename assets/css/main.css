@@ -314,7 +314,24 @@ button{
     border-radius: 15%;
 }
 /* FEATURED SWIPER  */
+/* SWIPER CLASS  */
 
+/* THE ICON FOR PREV AND NEXT IS NOT REDCEING  */
+.swiper-button-prev::after ,
+.swiper-button-next::after{
+    content: '';
+}
+.swiper-button-prev ,
+.swiper-button-next{
+    width: initial;
+    height: initial;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    padding: .5rem;
+    font-size: 1.5rem;
+    color: white;
+    transition: border .4s background-color .4s;
+}
 /* CAUROSEL END HERE  */
 
 /* grid block one */

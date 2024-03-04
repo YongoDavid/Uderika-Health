@@ -69,11 +69,17 @@ let swiperFeatured = new Swiper('.featured__swiper', {
     //     disableOnInteraction: false ,
     // },
 
+    // Navigation arrows
+    navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+    },
+
     breakpoints: {
         1150:{
             slidesPreview: 4,
             centeredSlides: false , 
-            
+
         }
     }
   })   
