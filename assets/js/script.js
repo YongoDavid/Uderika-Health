@@ -27,6 +27,14 @@ $(document).ready(function(){
     })
 });
 
+// ADD SHADOW HEADER 
+const shadowHeader = () => {
+    const header = document.getElementById('header')
+    // when scroll is better than 50 viewport height , add the scroll-header tag to the header tag 
+    this.scrollY >= 50? header.classList.add('shadow-header')
+                     :  header.classList.remove('shadow-header')
+}
+window.addEventListener('scroll' , shadowHeader)
 
 // HOME SWIPER SECTION 
 let swiperHome = new Swiper('.home__swiper', {
