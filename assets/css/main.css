@@ -317,10 +317,13 @@ button{
 /* SWIPER CLASS  */
 
 /* THE ICON FOR PREV AND NEXT IS NOT REDCEING  */
-.swiper-button-prev::after ,
-.swiper-button-next::after{
-    content: '';
+.swiper-button-prev::before,
+.swiper-button-next::before,
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: none !important;
 }
+
 .swiper-button-prev ,
 .swiper-button-next{
     width: initial;
@@ -328,10 +331,10 @@ button{
     background-color: whitesmoke;
     border: 2px solid black;
     padding: .5rem;
-    font-size: 1.5rem;
     color: white;
     transition: border .4s background-color .4s;
 }
+
 /* CAUROSEL END HERE  */
 
 /* grid block one */

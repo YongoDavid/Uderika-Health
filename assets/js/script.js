@@ -75,6 +75,7 @@ let swiperFeatured = new Swiper('.featured__swiper', {
     prevEl: '.swiper-button-prev',
     },
 
+
     breakpoints: {
         1150:{
             slidesPreview: 4,
