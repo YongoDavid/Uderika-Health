@@ -37,14 +37,14 @@ const shadowHeader = () => {
 window.addEventListener('scroll' , shadowHeader)
 
 // HOME SWIPER SECTION 
-let swiperHome = new Swiper('.home__swiper', {
+let swiperHome = new Swiper('.home__swiper', { 
     loop: true,
     spaceBetween: -24,
     grabCursor: true,
     slidesPreview: 'auto',
     centeredSlides: 'auto',
 
-    autoplay:{
+    autoplay:{ 
         delay: 3000,
         disableOnInteraction: false ,
     },
@@ -56,18 +56,14 @@ let swiperHome = new Swiper('.home__swiper', {
     }
   })
 
-//   FEATURED SWIPER 
+
+//   FEATURED/ BOOK SWIPER 
 let swiperFeatured = new Swiper('.featured__swiper', {
     loop: true,
     spaceBetween: 16,
     grabCursor: true,
     slidesPreview: 'auto',
     centeredSlides: 'auto',
-
-    // autoplay:{
-    //     delay: 3000,
-    //     disableOnInteraction: false ,
-    // },
 
     // Navigation arrows
     navigation: {
@@ -84,3 +80,46 @@ let swiperFeatured = new Swiper('.featured__swiper', {
         }
     }
   })   
+
+// NEW SWIPER / BOOKS SWIPER 
+let swiperNew = new Swiper('.new__swiper', {
+    loop: true,
+    spaceBetween: 16,
+    slidesPreview: 'auto',
+
+    breakpoints: {
+        1150:{
+            slidesPreview: 3,
+        }
+    }
+  })  
+
+// SHOW SCROLL UP  
+const scrollUp = () => {
+    const scrollUp = document.getElementById('scroll-up')
+    // when the scroll is above 350 vph add scroll 
+    this.scrollY >= 350 ? scrollUp.classList.add('show-scroll') 
+                : scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll',scrollUp)
+
+/* SCROLL SECTIONS ACTIVE LINKS  */
+const sections = document.querySelectorAll('section[id]')
+
+const scrollActive = () =>{
+    const scrollDown = window.scrollY
+
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight,
+            sectionTop = current.offsetTop -58,
+            sectionId = current.getAttribute('id'),
+            sectionsClass = document.querySelector('.nav__menu a[href*=' + sectionId + ']')
+            
+        if(scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight){
+            sectionsClass.classList.add('active-link')
+        }else {
+            sectionsClass.classList.remove('active-link')
+        }
+    })
+}
+window.addEventListener('scroll' , scroll)
