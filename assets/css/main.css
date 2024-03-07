@@ -236,7 +236,8 @@ button{
 .swiper-slide-active , .swiper-slide-duplicate-active{
     /* scale: 1; */
     transform: scale(1);
-    display: flex;
+    /* come back to this  */
+    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
@@ -299,12 +300,10 @@ button{
 }
 .featured__discount{
     color:  hsl(230, 70%, 16%);
-
 }
 .featured__price{
     font-size: 15px;
     text-decoration: line-through;
-
 }
 .featured__card .button{
     cursor: pointer;
@@ -327,7 +326,7 @@ button{
 /* FEATURED SWIPER  */
 /* SWIPER CLASS  */
 
-/* NEW GUIDES SECTION  */
+    /* AUDIO BOOKS SECTION START  */
 .new__card{
     display: flex; 
     align-items: center;
@@ -369,6 +368,7 @@ button{
 .new__swiper:nth-child(1){
     margin-bottom: 2rem;
 }
+ /* AUDIO BOOKS SECTION END  */
 
 /* THE ICON FOR PREV AND NEXT IS NOT REDCEING  */
 .swiper-button-prev::before,

@@ -76,7 +76,6 @@ let swiperFeatured = new Swiper('.featured__swiper', {
         1150:{
             slidesPreview: 4,
             centeredSlides: false , 
-
         }
     }
   })   
