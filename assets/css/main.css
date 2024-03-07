@@ -297,8 +297,14 @@ button{
     column-gap: .75rem;
     margin-bottom: 1.25rem;
 }
+.featured__discount{
+    color:  hsl(230, 70%, 16%);
+
+}
 .featured__price{
     font-size: 15px;
+    text-decoration: line-through;
+
 }
 .featured__card .button{
     cursor: pointer;
@@ -332,6 +338,10 @@ button{
     border: 2px solid rgb(238, 238, 238);
     transition: border .4s , background-color .4s;
     margin-bottom: 1rem;
+}
+.books-btn{
+    font-size: 13px;
+    padding: 10px;
 }
 .new__card:hover{
     border: 2px solid black;
