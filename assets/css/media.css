@@ -1,0 +1,44 @@
+/* BREAK POINTS  */
+
+/* SMALL SCREENS  */
+@media screen and (max-width: 320px){
+    .new__card{
+        flex-direction: column;
+    }
+}
+
+/* MEDIUM SCREENS  */
+@media screen and (min-width: 450px){
+    .featured__card{
+        width: 290px;
+    }
+
+    .new__card{
+        width: 390px;
+    }
+}
+@media screen and (min-width: 576px){
+    .join__form{
+        width: 328px;
+        justify-content: center;
+    }
+}
+@media screen and (min-width: 768px){
+
+}
+
+/* LARGE SCREEN SIZE  */
+@media screen and (min-width: 1150px){
+    .featured__container{
+        padding-top: 2rem;
+    }
+    .featured__title{
+        font-size: 1rem;
+    }
+    .join__bg{
+        object-position: 0 -.5rem;
+    }
+}
+@media screen and (min-width: 1220px){
+    
+}
