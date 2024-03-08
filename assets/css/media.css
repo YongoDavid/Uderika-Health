@@ -1,18 +1,18 @@
-/* BREAK POINTS  */
-
-/* SMALL SCREENS  */
+        /* SMALL SCREEN  */
 @media screen and (max-width: 320px){
+    .container{
+        margin-inline: 1rem;
+    }
     .new__card{
         flex-direction: column;
     }
 }
 
-/* MEDIUM SCREENS  */
-@media screen and (min-width: 450px){
+        /* MEDIUM SCREEN  */
+@media screen and (max-width: 450px){
     .featured__card{
         width: 290px;
     }
-
     .new__card{
         width: 390px;
     }
@@ -26,19 +26,41 @@
 @media screen and (min-width: 768px){
 
 }
-
-/* LARGE SCREEN SIZE  */
+        /* LARGE SCREEN  */
 @media screen and (min-width: 1150px){
+    .section{
+        padding-block: 7rem 2rem;
+    }
     .featured__container{
         padding-top: 2rem;
     }
     .featured__title{
         font-size: 1rem;
     }
+    .new__container{
+        padding-top: 2rem;
+    }
+    .new__card{
+        padding: 1.5rem;
+    }
+    .new__img{
+        width: 120px;
+    }
+    .new__title{
+        font-size: 1rem;
+    }
     .join__bg{
-        object-position: 0 -.5rem;
+        object-position: 0 -5rem;
+    }
+    .scrollup{
+        right: 3rem;
+    }
+    .show-scroll{
+        bottom: 3rem;
     }
 }
 @media screen and (min-width: 1220px){
-    
+ .container{
+    margin-inline: auto ;
+ }
 }

@@ -20,7 +20,8 @@ html{
     -webkit-text-size-adjust: 100%;
 }
 
-/* some resets & configuration */
+/* BASE / RESET CONFIG  */
+
 *,
 *::before,
 *::after{
@@ -83,10 +84,11 @@ button{
     margin-inline: 1.5rem;
 }
   
-/* .grid {
+/* come back here  */
+.grid {
     display: grid;
     gap: 1.5rem;
-} */
+}
   
 .section {
     padding-block: 5rem 1rem;
@@ -304,11 +306,11 @@ HOME / SWIPER SECTION
     padding: 2rem;
     overflow: hidden;
     border: 2px solid rgb(238, 238, 238);
-    transition: border .4s , background-color .4s;
+    transition: border .4s  , var(--clr-white) , .4s;
 }
 .featured__img{
     width: 150px;
-    margin: 0 auto .75rem ;
+    margin: 0 auto .75rem;
 }
 .featured__title{
     font-size: 20px;
@@ -319,10 +321,10 @@ HOME / SWIPER SECTION
     justify-content: center;
     align-items: center;
     column-gap: .75rem;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.24rem;
 }
 .featured__discount{
-    color:  hsl(230, 70%, 16%);
+    color:  hsl(230, 70%, 16%); ;
 }
 .featured__price{
     font-size: 15px;
@@ -330,70 +332,14 @@ HOME / SWIPER SECTION
 }
 .featured__card .button{
     cursor: pointer;
-    background-color: #458ff6;
-    color: #fff;
-    padding: 8px;
-    font: 15px var(--font-family-mulish);
+}
+/* .featured__card:hover{
+    right: 1.5rem;
+} */
 
-    border-radius: 54px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-}
-.featured__card .button:hover{
-    cursor: pointer;
-    background-color: #fff;
-    color: #458ff6;
-}
+
 /* FEATURED SWIPER  */
 /* SWIPER CLASS  */
-
-
-    /* AUDIO BOOKS SECTION START  */
-.new__card{
-    display: flex; 
-    align-items: center;
-    column-gap: 2.5rem;
-    background-color: white;
-    padding: 1.5rem 1rem;
-    color: hsl(230, 16%, 45%);
-    border: 2px solid rgb(238, 238, 238);
-    transition: border .4s , background-color .4s;
-    margin-bottom: 1rem;
-}
-.books-btn{
-    font-size: 13px;
-    padding: 10px;
-}
-.new__card:hover{
-    border: 2px solid black;
-}
-.new__img{
-    width: 100px;
-}
-.new__title{
-    font-size: 15px;
-    margin-bottom: .5rem;
-}
-.new__prices{
-    display: flex;
-    align-items: center;
-    column-gap: .75rem;
-    margin-bottom: .75rem;
-}
-.new__discount{
-    color: hsl(230, 70%, 16%);
-    text-decoration: line-through;
-}
-.new__price{
-    font-size: small;
-}
-.new__swiper:nth-child(1){
-    margin-bottom: 2rem;
-}
- /* AUDIO BOOKS SECTION END  */
-
 /* THE ICON FOR PREV AND NEXT IS NOT REDCEING  */
 .swiper-button-prev::before,
 .swiper-button-next::before,
@@ -407,7 +353,7 @@ HOME / SWIPER SECTION
     width: initial;
     height: initial;
     background-color: white;
-    /* border: 2px solid rgb(238, 238, 238); */
+    border: 2px solid rgb(238, 238, 238);
     padding: .5rem;
     font-size: 1.5rem;
     color: white;
@@ -415,6 +361,48 @@ HOME / SWIPER SECTION
 }
 /* CAUROSEL END HERE  */
 
+/* NEW BOOK / GUIDES SECTION  START */
+.new__card{
+    display: flex;
+    align-items: center;
+    column-gap: 2.5rem;
+    background-color:  hsl(230, 100%, 97%);
+    padding: 1.5rem 1rem;
+    color: hsl(230, 70%, 16%);
+    border: 2px solid hsl(230, 50%, 90%);
+    transition: border .4s , hsl(230, 100% ,97%) .4s;
+}
+.new__card:hover{
+    border: 2px solid hsl(230, 70%, 16%);
+}
+.new__img{
+    width: 100px;
+}
+.new__title{
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+.new__prices{
+    display: flex;
+    align-items: center;
+    column-gap: .75em;
+    margin-bottom: .75em;
+}
+.new__stars{
+    color: hsl(230, 62%, 56%);
+    font-size: 12px;
+}
+.new__discount{
+    color: hsl(230, 70%, 16%);
+}
+.new__price{
+    font-size: .813rem;
+    text-decoration: line-through;
+}
+.new__swiper:nth-child(1){
+    margin-bottom: 2rem;
+}
+/* NEW BOOK / GUIDES SECTION  END */
 /* grid block one */
 .grid-content .content-wrapper{
     max-width: 360px;
@@ -1100,26 +1088,3 @@ HOME / SWIPER SECTION
         width: 100%;
     }
 }
-/* BREAK POINTS FOR MEDIUM DEVICES START  */
-@media screen and (min-width: 450px){
-    .featured__card{
-        width: 290px;
-    }
-    .new__card{
-        width: 390px;
-    }
-
-    .home__container{
-        grid-template-columns: 420px;
-        justify-content: center;
-    }
-}
-/* BREAK POINTS FOR MEDIUM DEVICES END  */
-
-/* BREAK POINTS FOR SMALL DEVICES START  */
-@media screen and (max-width: 320px){
-    .new__card{
-        flex-direction: column;
-    }
-}
-/* BREAK POINTS FOR SMALL DEVICES END  */
