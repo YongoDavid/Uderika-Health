@@ -162,6 +162,13 @@ button{
 .banner{
     display: none;
 }
+.author{
+    font-size: .80rem;
+    color: #7d7987;
+}
+#Books__description , p{
+    text-align: left;
+}
 
 @media screen and (max-width:1120px){
 
