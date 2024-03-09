@@ -24,7 +24,11 @@ $(document).ready(function(){
 
     $('.navbar-hide-btn').click(function(){
         $('.navbar-box').removeClass("navbar-box-show");
-    })
+    });
+
+    $('.navbar-nav a').click(function(){
+        $('.navbar-box').removeClass("navbar-box-show");
+    });
 });
 
 // ADD SHADOW HEADER 

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <!-- custom css -->
-        <!-- <link rel = "stylesheet" href = "assets/css/main.css" /> -->
+        <link rel = "stylesheet" href = "assets/css/main.css" />
         <link rel = "stylesheet" href = "assets/css/utilities.css" />
         <link rel="stylesheet" href="Books.css">
         <!-- normalize.css -->
@@ -26,9 +26,10 @@
                 <div class="container">
                     <div class="navbar-content d-flex justify-content-between align-items-center">
                         <div class = "brand-and-toggler d-flex align-items-center justify-content-between">
-                            <a href = "#" class = "navbar-brand d-flex align-items-center">
-                                <span class="brand-shape d-inline-block text-white">U</span>
-                                <span class="brand-text fw-7">derika</span>
+                            <a href = "index.html" class = "navbar-brand d-flex align-items-center">
+                                <!-- <span class="brand-shape d-inline-block text-white">U</span>
+                                <span class="brand-text fw-7">derika</span> -->
+                                <img src="assets/images/Logo.png" alt="logo" width="55" height="55">
                             </a>
                             <button type = "button" class = "d-none navbar-show-btn">
                                 <i class = "fas fa-bars"></i>
@@ -64,9 +65,41 @@
         </header>
         <!-- end of header -->
         
-        <section id="Sc-main">
-            <h1>Our Books</h1>
-        </section>
+        <main>
+            <div class="Books__container">
+                <article class="featured__card">
+                    <img src="assets/images/Guide1.jpg" alt="image" class="featured__img">
+
+                    <h2 class="featured__title">Hidden truths about diabetic foods</h2>
+
+                    <h5 class="author">
+                        By: Dr Willam Uderika
+                    </h5>
+                    <div class="new__stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <a href="Books1.html">
+                        <button class="button" style="margin-top: 1rem;">Download Now</button>
+                    </a>
+
+                    <h6 class="Description" style="margin-top: 1rem;">
+                        <h5>Book summary</h5> 
+                        This book provides a thorough guide to understanding and managing diabetes,  dispelling common
+                        myths and emphasizing the role of nutrition. Divided into three sections, it covers misconceptions, offers
+                        solutions for a healthy diabetic diet, and introduces the use of a food diary for management.
+                        It promotes the consumption of nutrient-dense foods, portion control using the plate method, and
+                        consistency in meal timing.
+                        Encouraging experimentation and sharing of knowledge, the book aims to empower readers to take
+                        charge of their health. Contact information is provided for feedback and support.
+                    </h6>
+                </article>
+
+            </div>
+        </main>
     </div>
 
     <!-- jquery cdn -->
