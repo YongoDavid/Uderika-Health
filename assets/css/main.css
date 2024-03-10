@@ -304,7 +304,7 @@ HOME / SWIPER SECTION
     background-color: white;
     padding: 2rem;
     overflow: hidden;
-    border: 2px solid rgb(238, 238, 238);
+    border: 2px solid hsl(230, 50%, 90%);
     transition: border .4s  , var(--clr-white) , .4s;
 }
 .featured__img{
@@ -365,11 +365,14 @@ HOME / SWIPER SECTION
     display: flex;
     align-items: center;
     column-gap: 2.5rem;
-    background-color:  hsl(230, 100%, 97%);
     padding: 1.5rem 1rem;
     color: hsl(230, 70%, 16%);
     border: 2px solid hsl(230, 50%, 90%);
     transition: border .4s , hsl(230, 100% ,97%) .4s;
+}
+.new__card{
+    border-radius: 10px;
+    box-shadow: -4px 9px 25px -6px rgba(21,21,82,.1);
 }
 .new__card:hover{
     border: 2px solid hsl(230, 70%, 16%);
@@ -562,6 +565,10 @@ HOME / SWIPER SECTION
 .sc-articles{
     position: relative;
     padding: 108px 0 64.5px 0;
+}
+article{
+    border-radius: 10px;
+    box-shadow: -4px 9px 25px -6px rgba(21,21,82,.1);
 }
 .articles-item{
     box-shadow: 10px 40px 50px 0px #e5e9f666;
