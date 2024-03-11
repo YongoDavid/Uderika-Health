@@ -98,7 +98,8 @@ button{
     text-align: center;
     font-size: var(--h1-font-size);
     font-family: var(--second-font);
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
+
 }
   
 .main {
@@ -268,7 +269,7 @@ HOME / SWIPER SECTION
     align-items: center;
 }
 /* SERVICES */
-.sc-services{
+/* .sc-services{
     padding-top: 179px;
     padding-bottom: 115.9px;
     position: relative;
@@ -288,12 +289,14 @@ HOME / SWIPER SECTION
     z-index: -1;
     top: 290px;
     left: -70px;
-}
+} */
+
 /* HOME BUTTON  */
 .button{
     display: inline-flex;
-    background-color: hsl(230, 62%, 56%);
+    /* background-color: hsl(230, 62%, 56%); */
     /* background-color: rgb(191, 10, 48); */
+    background-color: var(--clr-blue);
     color: hsl(0, 0%, 100%);
     font-weight: 600;
     padding: 1rem 1.5rem;
@@ -346,8 +349,10 @@ HOME / SWIPER SECTION
 }
 .sub1{
     font-size: 10px;
-   color: black;
-   font-weight: 300;
+    color: var(--clr-gray);
+    mix-blend-mode: normal;
+    font-weight: 300;
+    font-style: normal;
 }
 
 /* FEATURED SWIPER  */
@@ -675,6 +680,7 @@ article{
 }
 .footer__title{
     color: white;
+    /* line-height: 1px; */
 }
 .footer__title , .sub1{
     font-size: 14px;
