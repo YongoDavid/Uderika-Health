@@ -100,8 +100,10 @@
 }
 
 .btn:hover{
-    color: var(--clr-white);
-    background-color: #1472f4;
+    /* color: var(--clr-white); */
+    /* background-color: #1472f4; */
+    color: rgb(191, 10, 48);
+    background-color: white;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
 }
 .btn-primary{
@@ -112,8 +114,10 @@
     color: var(--clr-blue);
 }
 .btn-secondary{
-    background-color: var(--clr-white);
-    color: var(--clr-blue);
+    background-color: rgb(191, 10, 48);
+    /* background-color: var(--clr-white); */
+    color: white;
+    /* color: var(--clr-blue); */
 }
 .btn-white-outline{
     color: var(--clr-white);
