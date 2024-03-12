@@ -310,9 +310,16 @@ HOME / SWIPER SECTION
     background-color: white;
     padding: 2rem;
     overflow: hidden;
-    border: 1px solid hsl(230, 50%, 90%);
+    border: 2px solid hsl(230, 50%, 90%);
     transition: border .4s  , var(--clr-white) , .4s;
 }
+/* .featured__card{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 46px 38px;
+    margin: 18.5px;
+} */
 .featured__img{
     width: 150px;
     margin: 0 auto .75rem;
@@ -386,9 +393,16 @@ HOME / SWIPER SECTION
     column-gap: 2.5rem;
     padding: 1.5rem 1rem;
     color: hsl(230, 70%, 16%);
-    border: 1px solid hsl(230, 50%, 90%);
+    border: 2px solid hsl(230, 50%, 90%);
     transition: border .4s , hsl(230, 100% ,97%) .4s;
 }
+/* .new__card{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 46px 38px;
+    margin: 18.5px;
+} */
 .new__card{
     border-radius: 10px;
     box-shadow: -4px 9px 25px -6px rgba(21,21,82,.1);
@@ -679,11 +693,17 @@ article{
     background-color: var(--clr-black);
 }
 .footer__title{
-    color: white;
+    color: #000;
+    /* color: white; */
     /* line-height: 1px; */
 }
 .footer__title , .sub1{
     font-size: 14px;
+}
+/* NEWS LETTER SECTION  */
+.join-sub-title{
+    /* color: white; */
+    color: #000;
 }
 .join__container{
     position: relative;
@@ -693,16 +713,24 @@ article{
     position: relative;
 }
 .join__title{
-    color: hsl(0, 0%, 100%);
-    font-size: 13px;
+    /* color: hsl(0, 0%, 100%); */
+    color: hsl(0, 0%, 0%);
+    font-size: 10px;
 }
 .join__form{
     display: grid;
     /* row-gap: 1rem; */
-    margin: 0 1rem 0 1rem;
+    /* margin: 0 1rem 0 1rem; */
+}
+.join__container{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 46px 38px;
+    margin: 18.5px;
 }
 .join__input{
-    padding: 1.25rem 1rem;
+    padding: 1rem 1rem;
     background-color: hsl(230, 100%, 96%);
     color: hsl(230, 70%, 16%);
     transition: background-color .4s;
@@ -717,6 +745,7 @@ article{
     margin-top: 1rem;
     padding-block: 1rem;
     cursor: pointer;
+    font-size: 13px;
 }
 .join__button{
     text-align: center;

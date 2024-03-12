@@ -205,7 +205,8 @@ button{
 }
 .button{
     display: inline-flex;
-    background-color: hsl(230, 62%, 56%);
+    /* background-color: hsl(230, 62%, 56%); */
+    background-color: var(--clr-blue);
     color: hsl(0, 0%, 100%);
     font-weight: 600;
     padding: 1rem 1.5rem;
