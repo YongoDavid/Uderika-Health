@@ -342,9 +342,9 @@ button{
     .navbar-box .nav-link:hover::after{
         width: 100%;
     }
-    .navbar-box .nav-link.nav-active{
+    /* .navbar-box .nav-link.nav-active{
         color: var(--clr-blue);
-    }
+    } */
     .navbar-box .nav-item{
         margin: 12px 0;
     }

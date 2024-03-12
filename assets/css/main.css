@@ -694,15 +694,13 @@ article{
 }
 .footer__title{
     color: #000;
-    /* color: white; */
-    /* line-height: 1px; */
+    line-height: 16px; 
 }
 .footer__title , .sub1{
     font-size: 14px;
 }
 /* NEWS LETTER SECTION  */
 .join-sub-title{
-    /* color: white; */
     color: #000;
 }
 .join__container{
@@ -837,6 +835,7 @@ article{
     background-color: hsl(230, 16%, 55%);
 } */
 .scrollup{
+    scroll-behavior: smooth;
     position: fixed;
     right: 1rem;
     bottom: -50%;
@@ -924,9 +923,9 @@ article{
     .navbar-box .nav-link:hover::after{
         width: 100%;
     }
-    .navbar-box .nav-link.nav-active{
+    /* .navbar-box .nav-link.nav-active{
         color: var(--clr-blue);
-    }
+    } */
     .navbar-box .nav-item{
         margin: 12px 0;
     }
