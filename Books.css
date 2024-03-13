@@ -244,7 +244,6 @@ form input{
 form button {
     text-align: center;
     justify-content: center;
-    border-style: double;
     margin-top: 1rem;
     padding-block: 1rem;
     cursor: pointer;
@@ -255,6 +254,10 @@ form button {
     font-weight: 600;
     padding: 1rem 1.5rem;
     transition: box-shadow .4s;
+    border-radius: 54px;
+}
+.button2{
+    border-radius: 0px;
 }
 
 /* footer */
