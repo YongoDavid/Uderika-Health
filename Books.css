@@ -175,7 +175,7 @@ button{
     transition: border .4s  , var(--clr-white) , .4s;
 }
 .featured__img{
-    width: 350px;
+    width: 250px;
     margin: 0 auto .75rem;
 }
 .featured__title{
