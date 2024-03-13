@@ -175,7 +175,7 @@ button{
     transition: border .4s  , var(--clr-white) , .4s;
 }
 .featured__img{
-    width: 150px;
+    width: 350px;
     margin: 0 auto .75rem;
 }
 .featured__title{
@@ -205,9 +205,8 @@ button{
 }
 .button{
     display: inline-flex;
-    /* background-color: hsl(230, 62%, 56%); */
-    background-color: var(--clr-blue);
-    color: hsl(0, 0%, 100%);
+    background-color: rgb(191, 10, 48);
+    color: white;
     font-weight: 600;
     padding: 1rem 1.5rem;
     transition: box-shadow .4s ;
@@ -215,6 +214,48 @@ button{
 /* .featured__card:hover{
     right: 1.5rem;
 } */
+/* BOOKS FORM SECTION  */
+.Books__form{
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    /* background-color: var(--clr-white); */
+    background-color: white;
+    border-radius: 20px;
+    padding: 46px 38px;
+    margin: 18px;
+    align-items: center;
+}
+form{
+    display: grid;
+}
+.Books__form{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+form input{
+    border: none;
+    padding: 1rem 1rem;
+    background-color: hsl(230, 100%, 96%);
+    color: hsl(230, 70%, 16%);
+    transition: background-color .4s;
+    font-size: 15px;
+}
+
+form button {
+    text-align: center;
+    justify-content: center;
+    border-style: double;
+    margin-top: 1rem;
+    padding-block: 1rem;
+    cursor: pointer;
+    font-size: 13px;
+    display: inline-flex;
+    background-color: rgb(191, 10, 48);
+    color: white;
+    font-weight: 600;
+    padding: 1rem 1.5rem;
+    transition: box-shadow .4s;
+}
 
 /* footer */
 .footer{
