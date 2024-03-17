@@ -1,3 +1,22 @@
+/* NEW UTILITIES  */
+/* *========== Font and typography ==========*/ 
+  /* .5rem = 8px | 1rem = 16px ...
+  --body-font: "Montserrat", sans-serif;
+  --second-font: "Montagu Slab", serif;
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+  ========== Font weight ==========
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600; */
+/* *========== Font and typography ==========*/ 
+
+
 /* utilities classes */
 .container{
     margin: 0 auto;
@@ -8,9 +27,9 @@
 
 /* text stylings and colors */
 .text{
-    color: var(--clr-gray);
-    mix-blend-mode: normal;
-    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1.2rem;
     font-style: normal;
 }
 .text-blue{color: var(--clr-blue);}
@@ -93,9 +112,9 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-weight: 700;
-    font-size: 18px;
-    color: var(--clr-white);
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
     transition: var(--transition-default);
 }
 
@@ -115,9 +134,7 @@
 }
 .btn-secondary{
     background-color: rgb(191, 10, 48);
-    /* background-color: var(--clr-white); */
     color: white;
-    /* color: var(--clr-blue); */
 }
 .btn-white-outline{
     color: var(--clr-white);

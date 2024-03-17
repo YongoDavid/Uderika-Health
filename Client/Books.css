@@ -154,13 +154,18 @@ button{
 /* hero section and content  */
 /* banner */
 .author{
-    font-size: .80rem;
+    font-size: "Montagu Slab", serif;;
+    font-size:  .75rem;
     color: #7d7987;
 }
 #Books__description , p{
     text-align: left;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: .938rem;
 }
 #Sum__heading {
+    font-family: "Montserrat", sans-serif;;
     font-size: 1rem;
     text-align: left;
 }
@@ -179,8 +184,9 @@ button{
     margin: 0 auto .75rem;
 }
 .featured__title{
-    font-size: 20px;
     margin-bottom: .5rem;
+    font-family: "Montagu Slab", serif;
+    line-height: 30px;
 }
 .featured__prices{
     display: flex;

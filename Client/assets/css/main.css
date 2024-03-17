@@ -67,6 +67,7 @@ body{
     line-height: 1.6;
     height: 100%;
     font-weight: 300;
+    background-color: #000;
 }
 html{
     scroll-behavior: smooth;
@@ -77,23 +78,46 @@ button{
     border: none;
     cursor: pointer;
 }
-
+/* .main{
+    background-color: rgb(201, 212, 235);
+} */
+#stroke{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 4px;
+    background-color: whitesmoke;
+}
+.section__title{
+    color: white;
+}
+.feedback-content{
+    border-style: solid;
+    border-color: whitesmoke;
+}
+#Audio ,#Audio > .sub1 , #join{
+    color: #000;
+}
+#Read > .sub1{
+    color: white;
+}
 /* REUSEABLE CSS CLASSES START */
 .container {
     max-width: 1220px;
     margin-inline: 1.5rem;
 }
-  
+
 /* come back here  */
 .grid {
     display: grid;
     gap: 1.5rem;
 }
-  
+ 
 .section {
     padding-block: 3rem 1rem;
 }
-#new{
+/* LOOK AT HOW TO ADD BACKGROUND TO CREATURED CARD  */
+#new {
     background-color: whitesmoke;
 }
 /* HEADING AND SUBHEADING  */
@@ -103,16 +127,15 @@ button{
     margin-bottom: 1rem;
 }
 .main__sub{
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    line-height: 30px;
 }
 .sub1{
     font-size: 16px;
-
-    color: var(--clr-gray);
-    mix-blend-mode: normal;
-    font-weight: 600;
-    font-style: normal;
+    font-weight: 300;
+    font-family: "Montagu Slab", serif;
 }
 /* HEADING AND SUBHEADING END*/
 .main {
@@ -224,6 +247,7 @@ button{
 /* banner */
 .banner-title{
     font-size: 48px;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.166;
 }
 .banner-content{
@@ -280,13 +304,15 @@ button{
     display: inline-flex;
     background-color: rgb(191, 10, 48);
     color: white;
+    font-size: 1rem;
     font-weight: 600;
+    font-family: "Montserrat", sans-serif;
     padding: 1rem 1.5rem;
     transition: box-shadow .4s ;
 }
 /* FEATURED SECTION  */
-/* CAUROSEL START HERE  */
-.featured__card{
+/* CAUROSEL START HERE */
+/* .featured__card{
     position: relative;
     text-align: center;
     background-color: white;
@@ -294,31 +320,34 @@ button{
     overflow: hidden;
     border: 2px solid hsl(230, 50%, 90%);
     transition: border .4s  , var(--clr-white) , .4s;
-}
+} */
 .featured__img , .new__img{
     width: 165px;
     margin: 0 auto .75rem;
     box-shadow: 1px 1px 10px 5px rgba(175, 173, 173, 0.65);
 }
 .featured__title{
-    font-size: 20px;
+    font-size: 1.25rempx;
     margin-bottom: .5rem;
 }
 .featured__prices{
-    font-size: small;
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: .75rem;
-    margin-bottom: 1.24rem;
+    margin-bottom: .75rem;
 }
 .featured__discount{
-    font-size: 14px;
-    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
 }
 .featured__price{
-    font-size: 15px;
-    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
 }
 .featured__card .button{
     cursor: pointer;
@@ -353,10 +382,10 @@ button{
     align-items: center;
     text-align: center;
     column-gap: 2.5rem;
-    padding: 1.5rem 1rem;
-    color: hsl(230, 70%, 16%);
-    border: 2px solid hsl(230, 50%, 90%);
-    transition: border .4s , hsl(230, 100% ,97%) .4s;
+    box-shadow: 10px 40px 50px 0px #e5e9f666;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 46px 38px;
 }
 .new__card{
     border-radius: 10px;
@@ -383,12 +412,16 @@ button{
     font-size: 12px;
 }
 .new__discount{
-    font-size: 14px;
-    font-weight: 500;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
 }
 .new__price{
-    font-size: .813rem;
-    text-decoration: line-through;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    font-style: normal;
 }
 .new__swiper:nth-child(1){
     margin-bottom: 2rem;
@@ -406,8 +439,9 @@ button{
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    font-size: 16px;
-    font-weight: 700;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
     background-color: rgb(191, 10, 48);
     color: white;
 }
@@ -653,17 +687,28 @@ article{
 .join__container{
     background-color: var(--clr-black);
 }
+.join__container{
+    position: relative;
+    padding-block: 3rem;
+}
+.join__container{
+    box-shadow: 0px 2px 10px 10px #a7a9af82;
+    background-color: var(--clr-white);
+    border-radius: 20px;
+    padding: 46px 38px;
+    margin: 18.5px;
+}
 .footer__title {
     font-size: 14px;
 }
 /* NEWS LETTER SECTION  */
 .join-sub-title{
-    color: var(--clr-gray);
+    color: black;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Montagu Slab", serif;
 }
-.join__container{
-    position: relative;
-    padding-block: 3rem;
-}
+
 .join__data{
     position: relative;
 }
@@ -675,13 +720,6 @@ article{
     display: grid;
     /* row-gap: 1rem; */
     /* margin: 0 1rem 0 1rem; */
-}
-.join__container{
-    box-shadow: 10px 40px 50px 0px #e5e9f666;
-    background-color: var(--clr-white);
-    border-radius: 20px;
-    padding: 46px 38px;
-    margin: 18.5px;
 }
 .join__input{
     padding: 1rem 1rem;
@@ -697,7 +735,6 @@ article{
     color: hsl(230, 16%, 45%);
 }
 .join__button{
-    border-style: double;
     margin-top: 1rem;
     padding-block: 1rem;
     cursor: pointer;
@@ -706,6 +743,9 @@ article{
 .join__button{
     text-align: center;
     justify-content: center;
+    font-size: .80rem;
+    font-weight: 600;
+    font-family: "Montserrat", sans-serif;
 }
 /* NEWS LETTER SECTION END  */
 
@@ -780,7 +820,7 @@ article{
     position: fixed;
     right: 1rem;
     bottom: -50%;
-    /* background-color: hsl(230, 100%, 97%); */
+    border-radius: 20%;
     background-color: whitesmoke;
     box-shadow: 0 2px 8px hsla(0, 0%, 0%, .1);
     display: inline-flex;
