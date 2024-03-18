@@ -1,22 +1,23 @@
-// const express = require('express');
-// const morgan = require('morgan');
-// const path = require('path');
-// const app = express();
-// app.listen(3000);
+const express = require('express');
+const morgan = require('morgan');
+const path = require('path');
+const app = express();
+const bookRoutes = require('./Routes/bookRoute')
+app.listen(3000);
 
-// app.use(express.static(path.join(__dirname, '../Client')));
-// app.use(morgan('dev'));
-// app.use(express.urlencoded({extended:true}));
-// app.use((req,res, next)=>{
-//     console.log('Server running on PORT 3000')
+app.use(express.static(path.join(__dirname, '../Client')));
+app.use(morgan('dev'));
+app.use(express.urlencoded({extended:true}));
+app.use((req,res, next)=>{
+    console.log('Server running on PORT 3000')
 
-//     next()
-// });
+    next()
+});
 
 
-// app.get('/', (req, res) => {
-//     res.sendFile('index.html', { root: path.join(__dirname, '../Client') });
-// });
+app.get('/', (req, res) => {
+    res.sendFile('index.html', { root: path.join(__dirname, '../Client') });
+});
 // app.get('/Books1' , (req,res)=>{
 //     res.sendFile('Books1.html', { root: path.join(__dirname, '../Client') });
 // });
@@ -41,6 +42,7 @@
 // app.get('/About',(req,res)=>{
 //     res.sendFile('AboutUs.html', { root: path.join(__dirname, '../Client') });
 // });
-// app.use((req,res)=>{
-//     res.status(404).sendFile('404.html', { root: path.join(__dirname, '../Client') });
-// });
+app.use(bookRoutes);
+app.use((req,res)=>{
+    res.status(404).sendFile('404.html', { root: path.join(__dirname, '../Client') });
+});
