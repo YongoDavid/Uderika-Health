@@ -158,8 +158,8 @@ button{
 #About{
 
 }   
-#About__main1{
-
+#About__main1  > .The__heading {
+    text-transform: capitalize;
 }
 .about__content{
     box-shadow: 10px 40px 50px 0px #e5e9f666;
