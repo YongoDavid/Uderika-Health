@@ -747,6 +747,15 @@ article{
     font-weight: 600;
     font-family: "Montserrat", sans-serif;
 }
+.message{
+    margin-top: 10px;
+    justify-content: center;
+    text-align: center;
+    color: red;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+}
 /* NEWS LETTER SECTION END  */
 
 
