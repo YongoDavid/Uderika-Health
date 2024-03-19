@@ -17,10 +17,23 @@ btn.addEventListener('click' , (e) => {
     }
 });
 
+// BOOKS FORM 
+// const details2 = document.querySelectorAll('input')
+// const btn2 = document.querySelector('.button2')
+// const msg2 = document.querySelector('.message2')
 
+// btn2.addEventListener('click' , (e) => {
+//     e.preventDefault()
+//     msg2.innerText = ''
 
-
-
+//     if(!details2.value){
+//         msg2.innerText = 'Please enter email'
+//     } else if (details.includes('@') && details.includes('.com')){
+//         msg2.innerText = 'email sent'
+//     } else {
+//         console.log('error')
+//     }
+// });
 
 
 
