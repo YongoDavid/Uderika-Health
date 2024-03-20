@@ -1,84 +1,23 @@
-// NEWS LETTER FORM
-const details = document.querySelectorAll('input')
-const btn = document.querySelector('.join__button')
-const msg = document.querySelector('.message')
+const form = document.querySelector('.join__form');
 
+// Add an event listener for form submission
+form.addEventListener('submit', function(event) {
+    event.preventDefault();
 
-btn.addEventListener('click' , (e) => {
-    e.preventDefault()
-    msg.innerText = ''
+    const emailInput = form.querySelector('.join__input');
+    const email = emailInput.value;
+    const messageElement = form.querySelector('.message');
+    if (email.includes('@') && email.includes('.com')) {
+        messageElement.textContent = "Email sent";
+        messageElement.style.color = "green";
+        
+        emailInput.value = "";
 
-    if(!details.value){
-        msg.innerText = 'Please enter email'
-    } else if (details.includes('@') && details.includes('.com')){
-        msg.innerText = 'email sent'
+        // Optionally, you can submit the form here
+        // form.submit();
     } else {
-        console.log('error')
+        messageElement.textContent = "Please enter a valid email address";
+        messageElement.style.color = "red"; // Style the message in red
     }
 });
-
-// BOOKS FORM 
-// const details2 = document.querySelectorAll('input')
-// const btn2 = document.querySelector('.button2')
-// const msg2 = document.querySelector('.message2')
-
-// btn2.addEventListener('click' , (e) => {
-//     e.preventDefault()
-//     msg2.innerText = ''
-
-//     if(!details2.value){
-//         msg2.innerText = 'Please enter email'
-//     } else if (details.includes('@') && details.includes('.com')){
-//         msg2.innerText = 'email sent'
-//     } else {
-//         console.log('error')
-//     }
-// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// BOOKS FORM 
-// const Books = document.querySelectorAll('.books_form')
-// const button2 = document.querySelector('.button2')
-// const msg_Book = document.querySelector('.message')
-
-// button2.addEventListener('click', (e) => { // Corrected 'click' event
-//     e.preventDefault()
-//     msg_Book.innerText = ''
-
-//     // Assuming you want to check if any of the input fields with class .books_form is empty
-//     let isEmpty = false;
-//     Books.forEach(book => {
-//         if (!book.value.trim()) {
-//             isEmpty = true;
-//         }
-//     });
-
-//     if(isEmpty || (!details.includes('.com') && !details.includes('@'))) {
-//         msg_Book.innerText = 'Please enter a valid email';
-//     } else {
-//         console.log('There is no email here');
-//     }
-// });
-
 
