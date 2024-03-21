@@ -3,6 +3,6 @@ document.getElementById('download3').addEventListener('click', function() {
     window.open(pdfUrl, '_blank');
 
     setTimeout(function() {
-        window.location.href = 'YOUR_MAIN_PAGE_URL';
-    }, 3000); // 3000 milliseconds = 3 seconds
+        window.location.href = 'index.html';
+    }, 1000); // 3000 milliseconds = 3 seconds
 });
