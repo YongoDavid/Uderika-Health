@@ -209,6 +209,11 @@ button{
     color: hsl(230, 62%, 56%);
     font-size: 12px;
 }
+/* error message  */
+.message2{
+    text-align: center;
+    margin-top: 5px;
+} 
 .button{
     display: inline-flex;
     background-color: rgb(191, 10, 48);
