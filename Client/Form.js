@@ -1,45 +1,46 @@
-const form = document.querySelector('.join__form');
-// Add an event listener for form submission
-form.addEventListener('submit', function(event) {
-    event.preventDefault();
+document.addEventListener('DOMContentLoaded' ,function() {
+    const form = document.querySelector('.join__form');
+    form.addEventListener('click', function(event) {
+        event.preventDefault();
 
-    const emailInput = form.querySelector('.join__input');
-    const email = emailInput.value;
-    const messageElement = form.querySelector('.message');
-    if (email.includes('@') && email.includes('.com')) {
-        messageElement.textContent = "Email sent";
-        messageElement.style.color = "green";
-        
-        emailInput.value = "";
+        const emailInput = form.querySelector('.join__input');
+        const email = emailInput.value;
+        const messageElement = form.querySelector('.message');
+        if (email.includes('@') && email.includes('.com')) {
+            messageElement.textContent = "Email sent";
+            messageElement.style.color = "green";
+            
+            emailInput.value = "";
 
-        // Optionally, you can submit the form here
-        // form.submit();
-    } else {
-        messageElement.textContent = "Please enter a valid email address";
-        messageElement.style.color = "red"; // Style the message in red
-    }
+            form.submit();
+        } else {
+            messageElement.textContent = "Please enter a valid email address";
+            messageElement.style.color = "red"; // Style the message in red
+        }
+    });
 });
 
 // Select the form element
-const bookForm = document.querySelector('.book-form');
-bookForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    const emailInput = bookForm.querySelector('.books_input');
-    const email = emailInput.value;
-    const messageElement = bookForm.querySelector('.message2');
-    if (email.includes('@') && email.includes('.com')) {
-        // Display the success message
-        messageElement.textContent = "Email sent";
-        messageElement.style.color = "green"; 
-        emailInput.value = "";
+document.addEventListener('DOMContentLoaded', function() {
+    const bookForm = document.querySelector('.book-form');
+    bookForm.addEventListener('click', function(event) {
+        event.preventDefault();
+        const emailInput1 = bookForm.querySelector('.books_input');
+        const email1 = emailInput1.value;
+        const messageElement1 = bookForm.querySelector('.message2');
+        if (email1.includes('@') && email1.includes('.com')) {
+            messageElement1.textContent = "Email sent";
+            messageElement1.style.color = "green";
 
-        // Optionally, you can submit the form here
-        // bookForm.submit();
-    } else {
-        // Display the error message
-        messageElement.textContent = "Please enter a valid email address";
-        messageElement.style.color = "red"; // Style the message in red
-    }
+            emailInput1.value = "";
+            
+            bookForm.submit();
+        } else {
+            // Display the error message
+            messageElement1.textContent = "Please enter a valid email address";
+            messageElement1.style.color = "red"; 
+        }
+    });
 });
 
 
