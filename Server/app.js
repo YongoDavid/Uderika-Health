@@ -6,6 +6,7 @@ const app = express();
 app.listen(3000);
 
 app.use(express.static(path.join(__dirname, '../Client')));
+app.use(express.static(path.join(__dirname , '/Users/wikiwoo/Desktop/Uderika-Project/Client')));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:true}));
 app.use((req,res, next)=>{
