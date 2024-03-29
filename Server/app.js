@@ -15,6 +15,12 @@ app.use((req,res, next)=>{
     next()
 });
 
+// app.use(
+//     cors({
+//         origin: ["http"]
+//     })
+// )
+
 // EMAIL ROUTE 
 app.post('/Email', (req, res) => {
     const { email } = req.body;
