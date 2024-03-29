@@ -3,26 +3,37 @@ document.addEventListener('DOMContentLoaded' ,function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
 
-        const result = new FormData(form);
-        console.log(result)
-
-        // const emailInput = form.querySelector('.join__input');
-        // const email = emailInput.value;
-        // const messageElement = form.querySelector('.message');
-        // if (email.includes('@') && email.includes('.com')) {
-        //     messageElement.textContent = "Email sent";
-        //     messageElement.style.color = "green";
+        const emailInput = form.querySelector('.join__input');
+        const email = emailInput.value;
+        const messageElement = form.querySelector('.message');
+        if (email.includes('@') && email.includes('.com')) {
+            messageElement.textContent = "Email sent";
+            messageElement.style.color = "green";
             
-        //     emailInput.value = "";
+            emailInput.value = "";
 
-        //     form.submit();
-        // } else {
-        //     messageElement.textContent = "Please enter a valid email address";
-        //     messageElement.style.color = "red"; // Style the message in red
-        // }
+            form.submit();
+        } else {
+            messageElement.textContent = "Please enter a valid email address";
+            messageElement.style.color = "red"; // Style the message in red
+        }
 
     });
+
+    fetch('/Email' , {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            form
+        }).then(res => {
+            console.log(res)
+        })
+    })
+
 });
+
 
 // Select the form element
 

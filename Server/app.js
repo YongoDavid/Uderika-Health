@@ -2,25 +2,24 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const db = require('./config/db'); // Import database connection setup
+const cors = require('cors')
 const app = express();
 
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
-
-// CUSTOM MIDDLEWARE 
+// // CUSTOM MIDDLEWARE 
 app.use((req,res, next)=>{
-    console.log('Server running on PORT 3000')
-
+    console.log('Server running on PORT 5500')
     next()
 });
 
-// app.use(
-//     cors({
-//         origin: ["http"]
-//     })
-// )
-
+app.use(
+    cors({
+        origin: ["http://127.0.0.1:5500"],
+        credentials: true
+    })
+)
 // EMAIL ROUTE 
 app.post('/Email', (req, res) => {
     const { email } = req.body;
@@ -47,7 +46,7 @@ app.use((err, req, res, next) => {
 });
 
 // START THE SERVER  
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
