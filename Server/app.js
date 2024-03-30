@@ -1,10 +1,12 @@
 const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser')
+const path = require('path');
 const db = require('./config/db'); // Import database connection setup
 const cors = require('cors')
 const app = express();
 
+app.use(express.static(path.join(__dirname, '../Client')));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
@@ -23,26 +25,27 @@ app.use(
 // EMAIL ROUTE 
 app.post('/Email', (req, res) => {
     const { email } = req.body;
+    console.log('Email received:', email);
+    res.sendStatus(200); // Send a response to the client
+//     if (!email || !isValidEmail(email)) {
+//         return res.status(400).json({ error: 'Invalid email address' });
+//     }
 
-    if (!email || !isValidEmail(email)) {
-        return res.status(400).json({ error: 'Invalid email address' });
-    }
+//     const insertQuery = 'INSERT INTO `Uderika`.`Email` (`Emails`) VALUES (?)';
+//     db.query(insertQuery, [email], (err, result) => {
+//         if (err) {
+//             console.error('Error storing email:', err);
+//             return res.status(500).json({ error: 'Internal server error' });
+//         }
+//         console.log('Email stored successfully:', email);
+//         return res.status(200).json({ message: 'Email saved' });
+//     });
+// });
 
-    const insertQuery = 'INSERT INTO `Uderika`.`Email` (`Emails`) VALUES (?)';
-    db.query(insertQuery, [email], (err, result) => {
-        if (err) {
-            console.error('Error storing email:', err);
-            return res.status(500).json({ error: 'Internal server error' });
-        }
-        console.log('Email stored successfully:', email);
-        return res.status(200).json({ message: 'Email saved' });
-    });
-});
-
-// Error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
+// // Error handling middleware
+// app.use((err, req, res, next) => {
+//     console.error(err.stack);
+//     res.status(500).send('Something went wrong!');
 });
 
 // START THE SERVER  

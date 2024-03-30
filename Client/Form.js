@@ -1,37 +1,42 @@
-// document.addEventListener('DOMContentLoaded' ,function() {
-//     const form = document.querySelector('.join__form');
-//     form.addEventListener('submit', function(event) {
-//         event.preventDefault();
+document.addEventListener('DOMContentLoaded' ,function() {
+    const form = document.querySelector('.join__form');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-//         const emailInput = form.querySelector('.join__input');
-//         const email = emailInput.value;
-//         const messageElement = form.querySelector('.message');
-//         if (email.includes('@') && email.includes('.com')) {
-//             messageElement.textContent = "Email sent";
-//             messageElement.style.color = "green";
+        const emailInput = form.querySelector('.join__input');
+        const email = emailInput.value;
+        const messageElement = form.querySelector('.message');
+        if (email.includes('@') && email.includes('.com')) {
+            messageElement.textContent = "Email sent";
+            messageElement.style.color = "green";
             
-//             emailInput.value = "";
+            emailInput.value = "";
+            // console.log(email)
+            form.submit();
+        } else {
+            messageElement.textContent = "Please enter a valid email address";
+            messageElement.style.color = "red"; // Style the message in red
+        };
 
-//             form.submit();
-//         } else {
-//             messageElement.textContent = "Please enter a valid email address";
-//             messageElement.style.color = "red"; // Style the message in red
-//         }
-
-//     });
-// });
-
-// fetch('/Email' , {
-//     method: 'POST',
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     body: JSON.stringify({
-//         form
-//     }).then(res => {
-        
-//     })
-// })
+        fetch('/Email', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ email: email })
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log('Email data sent successfully');
+            } else {
+                console.error('Failed to send email data:', response.status);
+            }
+        })
+        .catch(error => {
+            console.error('Error sending email data:', error);
+        });
+    });
+});
 
 // // Select the form element
 
