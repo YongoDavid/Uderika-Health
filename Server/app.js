@@ -24,8 +24,9 @@ app.use(
 )
 // EMAIL ROUTE 
 app.post('/Email', (req, res) => {
-    const { email } = req.body;
-    console.log('Email received:', email);
+    const { email, email1} = req.body;
+    console.log('Email0 received:', email);
+    console.log('Email1 received:', email1);
     res.sendStatus(200); // Send a response to the client
 //     if (!email || !isValidEmail(email)) {
 //         return res.status(400).json({ error: 'Invalid email address' });
