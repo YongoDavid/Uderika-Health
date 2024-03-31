@@ -26,9 +26,9 @@ app.use(
 app.post('/Email', (req, res) => {
     const { email, email1} = req.body;
     // for newsletter email 
-    console.log('Email0 received:', email);
+    console.log('Email received:', email);
     // for books email 
-    console.log('Email1 received:', email1);
+    // console.log('Email1 received:', email1);
     res.sendStatus(200); // Send a response to the client
 //     if (!email || !isValidEmail(email)) {
 //         return res.status(400).json({ error: 'Invalid email address' });
