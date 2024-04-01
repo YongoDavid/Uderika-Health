@@ -39,43 +39,61 @@ document.addEventListener('DOMContentLoaded' ,function() {
     });
 });
 
+
 document.addEventListener('DOMContentLoaded', function() {
     const bookForm = document.querySelector('.book-form');
-    bookForm.addEventListener('submit', function(event) {
+    const downloadButtons = document.querySelectorAll('.button2');
+
+    // Function to handle form submission and download
+    function handleFormSubmissionAndDownload(event) {
         event.preventDefault();
+        
+        // Get email input and message element
         const emailInput = bookForm.querySelector('.books_input');
         const email = emailInput.value;
         const messageElement = bookForm.querySelector('.message2');
+
+        // Validate email address
         if (email.includes('@') && email.includes('.com')) {
             messageElement.textContent = "Email sent";
             messageElement.style.color = "green";
 
+            // Send form data to server
+            fetch('/Email', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({email: email})
+            })
+            .then(response =>{
+                if(response.ok){
+                    console.log('Email data sent successfully');
+                } else {
+                    console.error('Error: Failed to send email data:', response.status);
+                }
+            })
+            .catch(error => {
+                console.error('Error sending email data:', error);
+            });
+
+            // Clear email input field
             emailInput.value = "";
-            // console.log(email1)
-            bookForm.submit();
         } else {
-            // Display the error message
+            // Display error message for invalid email
             messageElement.textContent = "Please enter a valid email address";
             messageElement.style.color = "red"; 
-        };
+            return; // Stop further execution if email is invalid
+        }
 
-        // sending form data from client to server using fetch api 
-        fetch('/Email', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({email: email})
-        })
-        .then(response =>{
-            if(response.ok){
-                console.log('Emaill data sent successffully')
-            }else {
-                console.error('Error Filed to send email data:' , response.status);
-            }
-        })
-        .catch(error => {
-            console.error('Error sending email data' , error);
-        });
+        // Get the URL for download
+        const url = this.getAttribute('data-url');
+        // Trigger download
+        window.location.href = url;
+    }
+
+    // Attach event listeners to all download buttons
+    downloadButtons.forEach(button => {
+        button.addEventListener('click', handleFormSubmissionAndDownload);
     });
 });
