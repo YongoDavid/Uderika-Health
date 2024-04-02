@@ -4,6 +4,7 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const db = require('./config/db'); // Import database connection setup
 const cors = require('cors')
+// const uuid = require('uuid')
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../Client')));
@@ -24,31 +25,37 @@ app.use(
 )
 // EMAIL ROUTE
 app.post('/Email', (req, res) => {
-    const { email, email1} = req.body;
-    // for newsletter email 
-    console.log('Email received:', email);
-    // for books email 
-    // console.log('Email1 received:', email1);
+    const { email} = req.body;
+    // for email 
+    // console.log('Email received:', email);
     res.sendStatus(200); // Send a response to the client
-//     if (!email || !isValidEmail(email)) {
-//         return res.status(400).json({ error: 'Invalid email address' });
-//     }
+    // const id = uuid.v4()
+    if (!email ) {
+        return res.status(400).json({ error: 'Invalid email address' });
+    }
 
-//     const insertQuery = 'INSERT INTO `Uderika`.`Email` (`Emails`) VALUES (?)';
-//     db.query(insertQuery, [email], (err, result) => {
-//         if (err) {
-//             console.error('Error storing email:', err);
-//             return res.status(500).json({ error: 'Internal server error' });
-//         }
-//         console.log('Email stored successfully:', email);
-//         return res.status(200).json({ message: 'Email saved' });
-//     });
-// });
+    // ANOTHER WAY TO CONNECT TO DB 
+    // const insertQuery = ' INSERT INTO Uderika`.`Email` (`Emails`) VALUES (?)' 
+    // db.query(insertQuery, [email], (err, result) => {
+    //     if (err) {
+    //         console.error('Error storing email:', err);
+    //         return res.status(500).json({ error: 'Internal server error' });
+    //     }
+    //     console.log('Email stored successfully:', email);
+    //     return res.status(200).json({ message: 'Email saved' });
+    // });
+   
+    // SIMPLE WAY TO CONNECT TO DB 
+    let sql = `INSERT INTO Emails (Emails)
+    VALUES ('${email}')
+    `
+    db.execute(sql)
+});
 
-// // Error handling middleware
-// app.use((err, req, res, next) => {
-//     console.error(err.stack);
-//     res.status(500).send('Something went wrong!');
+// Error handling middleware
+app.use((err, req, res, next) => {
+    console.error(err.stack);
+    res.status(500).send('Something went wrong!');
 });
 
 // START THE SERVER  
