@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
 // // CUSTOM MIDDLEWARE 
 app.use((req,res, next)=>{
-    console.log('Server running on PORT 5500')
+    console.log('Server running on LIVE SERVER')
     next()
 });
 
