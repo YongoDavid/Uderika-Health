@@ -6,7 +6,7 @@ const path = require('path');
 const cors = require('cors');
 const mongoose = require('mongoose');
 const {Schema } = mongoose;
-const dbURL = 'mongodb+srv://davidyongo9:ksV8Avu0F2iB5h26@uderika-emails.plbqwuf.mongodb.net/';
+const dbURL = 'mongodb+srv://davidyongo9:JdXL4sU9KgNS4PG7@uderika-emails.plbqwuf.mongodb.net/';
 mongoose.connect(dbURL)
 //         .then((result)=>{app.listen(5500)})
 //         .catch((err)=>{console.log(err)});
