@@ -8,9 +8,6 @@ const mongoose = require('mongoose');
 const {Schema } = mongoose;
 const dbURL = 'mongodb+srv://davidyongo9:JdXL4sU9KgNS4PG7@uderika-emails.plbqwuf.mongodb.net/';
 mongoose.connect(dbURL)
-//         .then((result)=>{app.listen(5500)})
-//         .catch((err)=>{console.log(err)});
-// const uuid = require('uuid')
 const app = express();
 
 app.use(express.static(path.join(__dirname, '../Client')));
@@ -24,32 +21,31 @@ app.use((req,res, next)=>{
 });
 app.use(
     cors({
-        origin: ["http://127.0.0.1:5500" ,],
+        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
         credentials: true
     })
 )
 app.use(express.json());
 
-
 // EMAIL SCHEMA 
-const Sch = new Schema({
-   email: String,
-   id: Number
-})
-const Email = mongoose.model('Email' , Sch);
-// module.exports = Email;
-
-
-// EMAIL ROUTE
-app.post('/Email', async(req, res) => {
-   const data = new Email({
-    id: req.body.id,
-    email: req.body.email
-   });
-
-   const Info = data.save()
-   res.send('posted')
-});
+const emailSchema = new Schema({
+    email: String,
+  });
+  
+  const Email = mongoose.model('Email', emailSchema);
+  
+  // EMAIL ROUTE
+  app.post('/Email', async (req, res) => {
+    try {
+      const { email } = req.body;
+      const newEmail = new Email({ email });
+      await newEmail.save();
+      res.status(201).send('Email saved successfully');
+    } catch (error) {
+      console.error('Error saving email:', error);
+      res.status(500).send('Internal Server Error');
+    }
+  });
     // const { email} = req.body;
     // // for email 
     // // console.log('Email received:', email);
