@@ -4,9 +4,10 @@ const bodyParser = require('body-parser')
 const path = require('path');
 // const db = require('./config/db'); // Import database connection setup
 const cors = require('cors');
+const dotenv = require('dotenv').config()
 const mongoose = require('mongoose');
 const {Schema } = mongoose;
-const dbURL = 'mongodb+srv://davidyongo9:JdXL4sU9KgNS4PG7@uderika-emails.plbqwuf.mongodb.net/';
+const dbURL = process.env.DB_CONNECTION_STRING;
 mongoose.connect(dbURL)
 const app = express();
 
