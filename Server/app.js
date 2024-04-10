@@ -4,7 +4,7 @@ const bodyParser = require('body-parser')
 const path = require('path');
 // const db = require('./config/db'); // Import database connection setup
 const cors = require('cors');
-const dotenv = require('dotenv').config()
+require('dotenv').config()
 const mongoose = require('mongoose');
 const {Schema } = mongoose;
 const dbURL = process.env.DB_CONNECTION_STRING;
@@ -23,7 +23,7 @@ app.use((req,res, next)=>{
 app.use(
     cors({
         origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
-        credentials: true,
+        credentials: true
     })
 )
 app.use(express.json());
