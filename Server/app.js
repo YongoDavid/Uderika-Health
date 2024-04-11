@@ -20,6 +20,7 @@ app.use((req,res, next)=>{
     console.log('Server running on LIVE')
     next()
 });
+
 app.use(
     cors({
         origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
@@ -72,7 +73,6 @@ const emailSchema = new Schema({
     // VALUES ('${email}')
     // `
     // db.execute(sql)
-
 
 // Error handling middleware
 app.use((err, req, res, next) => {
