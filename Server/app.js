@@ -22,12 +22,12 @@ app.use((req,res, next)=>{
     next()
 });
 
-app.use(
-    cors({
-        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
-        credentials: true
-    })
-)
+// app.use(
+//     cors({
+//         origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
+//         credentials: true
+//     })
+// )
 app.use(express.json());
 
 // EMAIL SCHEMA 
