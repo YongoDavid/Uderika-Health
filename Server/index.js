@@ -51,8 +51,8 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 // Create connection to MySQL database
 const connection = mysql.createConnection({
-  // added 
-  connectionLimit: 10,
+  // // added 
+  // connectionLimit: 10,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_NAME,
@@ -89,18 +89,18 @@ const connection = mysql.createConnection({
     });
 });
 
-// ADDED 
-// Close the database connection when the app shuts down
-process.on('SIGINT', () => {
-  connection.end((err) => {
-    if (err) {
-      console.error('Error closing the database connection:', err);
-      process.exit(1);
-    }
-    console.log('Database connection closed');
-    process.exit(0);
-  });
-});
+// // ADDED 
+// // Close the database connection when the app shuts down
+// process.on('SIGINT', () => {
+//   connection.end((err) => {
+//     if (err) {
+//       console.error('Error closing the database connection:', err);
+//       process.exit(1);
+//     }
+//     console.log('Database connection closed');
+//     process.exit(0);
+//   });
+// });
 
 // START THE SERVER  
 const PORT = process.env.PORT || 5500;
