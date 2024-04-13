@@ -51,8 +51,8 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 // Create connection to MySQL database
 const connection = mysql.createConnection({
-  // // added 
-  // connectionLimit: 10,
+  // added 
+  connectionLimit: 10,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_NAME,
