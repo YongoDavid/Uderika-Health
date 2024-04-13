@@ -3,7 +3,6 @@ const morgan = require('morgan');
 require('dotenv').config()
 const bodyParser = require('body-parser')
 const path = require('path');
-// const db = require('./config/db'); // Import database connection setup/÷
 const cors = require('cors');
 const mysql = require('mysql2');
 // const mongoose = require('mongoose');
@@ -11,24 +10,23 @@ const mysql = require('mysql2');
 // const dbURL = process.env.DB_CONNECTION_STRING;
 // mongoose.connect(dbURL)
 const app = express();
-
-app.use(express.static(path.join(__dirname, '../Client')));
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:true}));
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // // CUSTOM MIDDLEWARE 
-app.use((req,res, next)=>{
-    console.log('Server running on LIVE')
-    next()
-});
-
 app.use(
     cors({
-        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
+        origin: ["http://127.0.0.1:3306" , "https://uderika-health.onrender.com"],
         credentials: true
     })
 )
 app.use(express.json());
+app.use((req,res, next)=>{
+  console.log('Server running on LIVE')
+  next()
+});
+
+app.use(express.static(path.join(__dirname, '../Client')));
 
 // EMAIL SCHEMA 
 // const emailSchema = new Schema({
@@ -67,8 +65,6 @@ const connection = mysql.createConnection({
     console.log('Connected to MySQL database');
   });
   
-  // Middleware to parse JSON bodies
-  app.use(bodyParser.json());
   
   // Route to handle incoming email data
   app.post('/Email', (req, res) => {
