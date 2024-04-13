@@ -5,6 +5,7 @@ const bodyParser = require('body-parser')
 const path = require('path');
 const cors = require('cors');
 const mysql = require('mysql2');
+const { connect } = require('http2');
 // const mongoose = require('mongoose');
 // const {Schema } = mongoose;
 // const dbURL = process.env.DB_CONNECTION_STRING;
@@ -50,6 +51,8 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 // Create connection to MySQL database
 const connection = mysql.createConnection({
+  // added 
+  connectionLimit: 10,
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     database: process.env.DB_NAME,
@@ -63,6 +66,9 @@ const connection = mysql.createConnection({
       return;
     }
     console.log('Connected to MySQL database');
+
+    // added 
+    connect.release();
   });
   
   
@@ -71,7 +77,7 @@ const connection = mysql.createConnection({
     const { email } = req.body;
   
     // Insert email into the database
-    const sql = 'INSERT INTO Emails (Emails) VALUES (?)';
+    const sql = 'INSERT INTO `Uderika Emails` (Emails) VALUES (?)'
     connection.query(sql, [email], (err, result) => {
       if (err) {
         console.error('Error inserting email into database:', err);
@@ -82,11 +88,18 @@ const connection = mysql.createConnection({
       res.sendStatus(200); // Send success response
     });
 });
-  
-// Error handling middleware
-app.use((err, req, res, next) => {
-    console.error(err.stack);
-    res.status(500).send('Something went wrong!');
+
+// ADDED 
+// Close the database connection when the app shuts down
+process.on('SIGINT', () => {
+  connection.end((err) => {
+    if (err) {
+      console.error('Error closing the database connection:', err);
+      process.exit(1);
+    }
+    console.log('Database connection closed');
+    process.exit(0);
+  });
 });
 
 // START THE SERVER  
