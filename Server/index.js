@@ -23,6 +23,21 @@ app.use((req,res, next)=>{
 });
 app.use(express.static(path.join(__dirname, '../Client')));
 
+// Route to provide the content of the text file
+app.get('/emails', (req, res) => {
+  // Read the content of the text file
+  fs.readFile('emails.txt', 'utf8', (err, data) => {
+      if (err) {
+          console.error('Error reading file:', err);
+          res.status(500).send('Error reading file');
+      } else {
+          // Parse the data into an array of emails
+          const emails = data.trim().split('\n');
+          res.json(emails);
+      }
+  });
+});
+
 app.post('/Email',(req,res)=>{
   const email = req.body.email;
 
