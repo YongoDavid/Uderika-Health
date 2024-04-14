@@ -9,6 +9,9 @@ const app = express();
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
+
+                        // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
+
 // // CUSTOM MIDDLEWARE 
 app.use(
     cors({
@@ -23,7 +26,9 @@ app.use((req,res, next)=>{
 });
 app.use(express.static(path.join(__dirname, '../Client')));
 
+
 // Route to provide the content of the text file
+// AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
 app.get('/emails', (req, res) => {
   // Read the content of the text file
   fs.readFile('emails.txt', 'utf8', (err, data) => {
@@ -38,19 +43,39 @@ app.get('/emails', (req, res) => {
   });
 });
 
-app.post('/Email',(req,res)=>{
+
+// THIS ROUTE GETS THE EMAIL AND SEND THEN TO A TXT FILE INSTEAD OF DATABASE 
+// app.post('/Email',(req,res)=>{
+//   const email = req.body.email;
+
+//   fs.appendFile('emails.txt',email + '\n' ,(err) => {
+//     if(err){
+//       console.error('Error saving email:', err);
+//       res.status(500).send('Error saving email');
+//     } else {
+//       console.log('Email saved:', email);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
+
+
+// Route to handle saving emails
+app.post('/Email', (req, res) => {
   const email = req.body.email;
 
-  fs.appendFile('emails.txt',email + '\n' ,(err) => {
-    if(err){
+  // Append email to text file or create it if it doesn't exist
+  try {
+      fs.appendFileSync('emails.txt', email + '\n');
+      // ADDING EMAIL TO NEW LINK WITH  '\n' 
+      console.log('Email saved:', email + '\n');
+      res.sendStatus(200);
+  } catch (err) {
       console.error('Error saving email:', err);
       res.status(500).send('Error saving email');
-    } else {
-      console.log('Email saved:', email);
-      res.sendStatus(200);
-    }
-  });
+  }
 });
+
 
 
 // START THE SERVER  
