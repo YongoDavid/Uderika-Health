@@ -9,7 +9,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-                        // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
+       // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 
 const corsOptions = {
     origin: ["https://uderika-admin.onrender.com" , "https://uderika-health.onrender.com"],
@@ -19,7 +19,6 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-
 app.use(express.json());
 app.use((req,res, next)=>{
   console.log('Server running on LIVE')
@@ -76,8 +75,6 @@ app.post('/Email',(req,res)=>{
 //       res.status(500).send('Error saving email');
 //   }
 // });
-
-
 
 // START THE SERVER  
 const PORT = process.env.PORT || 5500;
