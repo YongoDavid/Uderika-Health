@@ -14,10 +14,19 @@ app.use(bodyParser.json());
 // // CUSTOM MIDDLEWARE 
 app.use(
     cors({
-        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com"],
-        credentials: true
+        
     })
 )
+
+const corsOptions = {
+    origin: ["https://uderika-admin.onrender.com" , "https://uderika-health.onrender.com"],
+    // credentials: true,
+    methods: ['GET', 'POST'], // Allowed HTTP methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
+};
+
+app.use(cors(corsOptions));
+
 app.use(express.json());
 app.use((req,res, next)=>{
   console.log('Server running on LIVE')
