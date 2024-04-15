@@ -27,7 +27,6 @@ app.use((req,res, next)=>{
 app.use(express.static(path.join(__dirname, '../Client')));
 
 
-// Route to provide the content of the text file
 // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
 app.get('/emails', (req, res) => {
   // Read the content of the text file
