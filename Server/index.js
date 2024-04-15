@@ -7,7 +7,6 @@ const path = require('path');
 const cors = require('cors');
 const app = express();
 app.use(morgan('dev'));
-app.use(express.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
                         // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
@@ -15,7 +14,7 @@ app.use(bodyParser.json());
 // // CUSTOM MIDDLEWARE 
 app.use(
     cors({
-        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com"],
+        origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com"],
         credentials: true
     })
 )
