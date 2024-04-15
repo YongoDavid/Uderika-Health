@@ -1,5 +1,5 @@
-const express = require('express');
-const fs = require('fs')
+const express = require('express')
+const fs = require('fs');
 const morgan = require('morgan');
 require('dotenv').config()
 const bodyParser = require('body-parser')
@@ -10,13 +10,6 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
                         // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
-
-// // CUSTOM MIDDLEWARE 
-app.use(
-    cors({
-        
-    })
-)
 
 const corsOptions = {
     origin: ["https://uderika-admin.onrender.com" , "https://uderika-health.onrender.com"],
