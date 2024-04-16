@@ -58,6 +58,18 @@
     .show-scroll{
         bottom: 3rem;
     }
+    .new__card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        column-gap: 2.5rem;
+        max-width: 300px;
+    }
+    .container {
+        justify-content: center;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1220px){
  .container{
