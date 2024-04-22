@@ -44,11 +44,29 @@ app.get('/emails', (req, res) => {
 
 
 // THIS ROUTE GETS THE EMAIL AND SEND THEN TO A TXT FILE INSTEAD OF DATABASE 
-app.post('/Email',(req,res)=>{
-  const email = req.body.email;
+// app.post('/Email',(req,res)=>{
+//   const email = req.body.email;
+//   const timestamp = new Date().toISOString();
+//   const data = `${email},${timestamp}\n`;
 
-  fs.appendFile('emails.txt',email + '\n' ,(err) => {
-    if(err){
+//   fs.appendFile('emails.txt',email , data+ '\n' ,(err) => {
+//     if(err){
+//       console.error('Error saving email:', err);
+//       res.status(500).send('Error saving email');
+//     } else {
+//       console.log('Email saved:', email);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
+
+app.post('/Email', (req, res) => {
+  const email = req.body.email;
+  const timestamp = new Date().toISOString();
+  const data = `${email},${timestamp}\n`;
+
+  fs.appendFile('emails.txt', data, (err) => {
+    if (err) {
       console.error('Error saving email:', err);
       res.status(500).send('Error saving email');
     } else {
@@ -58,22 +76,6 @@ app.post('/Email',(req,res)=>{
   });
 });
 
-
-// Route to handle saving emails
-// app.post('/Email', (req, res) => {
-//   const email = req.body.email;
-
-//   // Append email to text file or create it if it doesn't exist
-//   try {
-//       fs.appendFileSync('emails.txt', email + '\n');
-//       // ADDING EMAIL TO NEW LINK WITH  '\n' 
-//       console.log('Email saved:', email + '\n');
-//       res.sendStatus(200);
-//   } catch (err) {
-//       console.error('Error saving email:', err);
-//       res.status(500).send('Error saving email');
-//   }
-// });
 
 // START THE SERVER  
 const PORT = process.env.PORT || 5500;
