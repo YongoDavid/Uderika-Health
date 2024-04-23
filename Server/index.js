@@ -60,18 +60,45 @@ app.get('/emails', (req, res) => {
 //   });
 // });
 
+
+// app.post('/Email', (req, res) => {
+//   const email = req.body.email;
+//   const timestamp = new Date().toDateString();
+//   const data = `${email} Date:${timestamp}`;
+
+//   fs.appendFile('emails.txt', data, (err) => {
+//     if (err) {
+//       console.error('Error saving email:', err);
+//       res.status(500).send('Error saving email');
+//     } else {
+//       console.log('Email saved:', email);
+//       res.sendStatus(200);
+//     }
+//   });
+// });
+
 app.post('/Email', (req, res) => {
   const email = req.body.email;
-  const timestamp = new Date().toDateString();
-  const data = `${email}\nDate:${timestamp}`;
+  const timestamp = new Date().toDateString(); // Use toDateString() to get only the date
 
-  fs.appendFile('emails.txt', data, (err) => {
+  // Each entry is appended separately
+  fs.appendFile('emails.txt', email + '\n', (err) => {
     if (err) {
       console.error('Error saving email:', err);
       res.status(500).send('Error saving email');
     } else {
       console.log('Email saved:', email);
-      res.sendStatus(200);
+      
+      // Append timestamp after the email
+      fs.appendFile('emails.txt', timestamp + '\n', (err) => {
+        if (err) {
+          console.error('Error saving timestamp:', err);
+          res.status(500).send('Error saving timestamp');
+        } else {
+          console.log('Timestamp saved:', timestamp);
+          res.sendStatus(200);
+        }
+      });
     }
   });
 });
