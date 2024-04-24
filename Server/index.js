@@ -34,32 +34,16 @@ app.get('/emails', (req, res) => {
       if (err) {
           console.error('Error reading file:', err);
           res.status(500).send('Error reading file');
-      } else {
-          // Parse the data into an array of emails
-          const emails = data.trim().split('\n');
-          res.json(emails);
+      } else{
+        // parse the data an array of emails 
+        const emails = data.trim().split()('\n').map(line =>{
+          const [email, data] = line.split('   Date:');
+          return {email , data};
+        });
+        res.json(emails);
       }
   });
 });
-
-
-// THIS ROUTE GETS THE EMAIL AND SEND THEN TO A TXT FILE INSTEAD OF DATABASE 
-// app.post('/Email',(req,res)=>{
-//   const email = req.body.email;
-//   const timestamp = new Date().toISOString();
-//   const data = `${email},${timestamp}\n`;
-
-//   fs.appendFile('emails.txt',email , data+ '\n' ,(err) => {
-//     if(err){
-//       console.error('Error saving email:', err);
-//       res.status(500).send('Error saving email');
-//     } else {
-//       console.log('Email saved:', email);
-//       res.sendStatus(200);
-//     }
-//   });
-// });
-
 
 app.post('/Email', (req, res) => {
   const email = req.body.email;
