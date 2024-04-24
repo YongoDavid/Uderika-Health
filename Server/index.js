@@ -48,7 +48,7 @@ app.get('/emails', (req, res) => {
 app.post('/Email', (req, res) => {
   const email = req.body.email;
   const timestamp = new Date().toDateString();
-  const data = `${email}   Date:${timestamp}\n`;
+  const data = `${email} ${timestamp}\n`;
 
   fs.appendFile('emails.txt', data, (err) => {
     if (err) {
