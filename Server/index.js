@@ -37,8 +37,8 @@ app.get('/emails', (req, res) => {
       } else{
         // parse the data an array of emails 
         const emails = data.trim().split()('\n').map(line =>{
-          const [email, data] = line.split('   Date:');
-          return {email , data};
+          const [email, date] = line.split('   Date:');
+          return {email , date};
         });
         res.json(emails);
       }
