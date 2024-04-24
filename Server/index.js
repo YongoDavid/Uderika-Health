@@ -65,5 +65,5 @@ app.post('/Email', (req, res) => {
 // START THE SERVER  
 const PORT = process.env.PORT || 5500;
 app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+    console.log(`Server is running at port ${PORT}`);
 });
