@@ -71,7 +71,7 @@
         padding-top: 2rem;
     }
     .new__card{
-        padding: 1.5rem;
+        padding: 1rem;
     }
     .new__img{
         width: 120px;
@@ -88,21 +88,32 @@
     .show-scroll{
         bottom: 3rem;
     }
+    /* ALL BOOKS START */
     .new__card{
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
         column-gap: 2.5rem;
-        max-width: 300px;
+        max-width: 600px;
+    }
+    .section__title .main__sub{
+        font-size: 35px;
+    }
+    .section__title .sub1{
+        font-size: 20px;
     }
     .container {
         justify-content: center;
         text-align: center;
     }
+    /* ALL BOOKS END  */
 }
 @media screen and (min-width: 1220px){
  .container{
     margin-inline: auto ;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
  }
 }
