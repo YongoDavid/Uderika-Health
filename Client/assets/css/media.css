@@ -112,8 +112,5 @@
 @media screen and (min-width: 1220px){
  .container{
     margin-inline: auto ;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center;
  }
 }
