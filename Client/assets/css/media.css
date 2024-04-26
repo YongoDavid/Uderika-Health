@@ -18,10 +18,40 @@
     }
 }
 @media screen and (min-width: 576px){
-    .join__form{
-        width: 328px;
+    /* NEWSLETTER START  */
+    .join__container{
+        max-width: 900px;
         justify-content: center;
+        margin: auto;
+        text-align: center;
     }
+    .join__container{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+    #join{
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 3rem;
+        margin-right: 2em;
+    }
+    #join h2{
+        font-size: 35px;
+    }
+    #join span{
+        font-size: 20px;
+    }
+    #News__letter > form {
+        justify-content: center;
+        text-align: center;
+        margin-top: auto;
+        margin-bottom: auto;
+        line-height: 10rem;
+    }
+    /* NEWSLETTER END  */
 }
 @media screen and (min-width: 768px){
 
