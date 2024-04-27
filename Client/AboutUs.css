@@ -417,3 +417,23 @@ button{
         width: 100%;
     }
 }
+@media screen and (min-width: 1150px){
+    .Desk_img{
+        margin-left: auto;
+        margin-right: auto;
+        width: 900px;
+    }
+    .The__heading{
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .part{
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .part p {
+        font-size: 18px;
+    }
+}
