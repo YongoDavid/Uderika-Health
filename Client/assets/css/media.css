@@ -104,21 +104,31 @@
         font-size: 20px;
     }
     /* come back here and redo the desktop screen  */
+    /* for all books  */
     .container{
-        margin-left: 0;
-        margin-right: auto;
-        max-width: 1200px;
-        justify-content: center;
-        text-align: center;
-        margin-inline: 0rem;
+        max-width: calc(1273px - 32px);
     }
+    /* for audio books  */
     #Laptop-con{
-        display: flex;
-        /* max-width: 500px; */
-        /* margin: 0; */
+        max-width: calc(700px);
+    }
+    /* for audio books  */
+    .new__swiper{
+
+    }
+    /* for audio books  */
+    .new__container{
+
+    }
+    /* for pdf books  */
+    .featured__container{
+
+    }
+    /* for pdf books  */
+    .featured__swiper{
+
     }
     /* ALL BOOKS END  */
-    
 
     /* Landing page  */
     .banner-title{
@@ -154,7 +164,6 @@
         margin-top: 1em;
         margin-bottom: 1em;
     }
-
     .btn-secondary{
         min-width: 250px;
         font-size: 20px;
