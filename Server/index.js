@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 
 const corsOptions = {
     origin: ["https://uderika-health.vercel.app" , "https://uderika-admin.vercel.app"],
-    // credentials: true,
+    credentials: true,
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
 };
