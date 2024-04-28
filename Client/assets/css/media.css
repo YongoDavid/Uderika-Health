@@ -106,11 +106,23 @@
     /* come back here and redo the desktop screen  */
     /* for all books  */
     .container{
-        max-width: calc(1275px - 32px);
+        max-width: calc(1270px - 32px);
     }
     /* for audio books  */
     #Laptop-con{
-        max-width: calc(300px);
+        margin: auto;
+        padding-right: 0px;
+        padding-left: 0px;
+        /* come back here  */
+        margin-left: 36em;
+
+    }
+    #Laptop-con .swiper-slide-duplicate{
+        display: none;
+    }
+    #Laptop-swiper{
+        max-width: 400px;
+        overflow: visible;
     }
     /* for all books  */
     .new__card{
