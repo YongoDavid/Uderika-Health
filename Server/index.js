@@ -19,7 +19,7 @@ const corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(express.json());
+qapp.use(express.json());
 app.use((req,res, next)=>{
   console.log('Server running on LIVE')
   next()
