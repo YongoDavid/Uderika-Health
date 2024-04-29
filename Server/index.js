@@ -36,9 +36,9 @@ app.get('/Email', (req, res) => {
           res.status(500).send('Error reading file');
       } else{
         // parse the data an array of emails 
-        const emails = data.trim().split()('\n').map(line =>{
+        const emails = data.trim().split('\n').map(line => {
           const [email, date] = line.split('   Date:');
-          return {email , date};
+          return { email, date };
         });
         res.json(emails);
       }
