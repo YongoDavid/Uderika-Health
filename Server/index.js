@@ -9,7 +9,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-       // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
+// USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 
 const corsOptions = {
     origin: ["http://127.0.0.1:5500" , "https://uderika-health.vercel.app" , "https://uderika-admin.vercel.app"],
@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 
 // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
-app.get('/emails', (req, res) => {
+app.get('/Email', (req, res) => {
   // Read the content of the text file
   fs.readFile('emails.txt', 'utf8', (err, data) => {
       if (err) {
