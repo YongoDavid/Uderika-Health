@@ -54,7 +54,24 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.style.color = "green";
 
             emailInput.value = "";
-            // Sending form data client to server using fetch api 
+            // // Sending form data client to server using fetch api 
+            // fetch('/Email', {
+            //     method: 'POST',
+            //     headers: {
+            //         'Content-Type': 'application/json'
+            //     },
+            //     body: JSON.stringify({ email: email })
+            // })
+            // .then(response => {
+            //     if (response.ok) {
+            //         console.log('Email data sent successfully');
+            //     } else {
+            //         console.error('Failed to send email data:', response.status);
+            //     }
+            // })
+            // .catch(error => {
+            //     console.error('Error sending email data:', error);
+            // });
             fetch('/Email', {
                 method: 'POST',
                 headers: {
@@ -66,12 +83,17 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (response.ok) {
                     console.log('Email data sent successfully');
                 } else {
-                    console.error('Failed to send email data:', response.status);
+                    // Check if response status is available
+                    if (response.status) {
+                        console.error('Failed to send email data:', response.status);
+                    } else {
+                        console.error('Failed to send email data: Unknown error');
+                    }
                 }
             })
             .catch(error => {
                 console.error('Error sending email data:', error);
-            });
+            });            
         } else {
             messageElement.textContent = "Please enter a valid email address";
             messageElement.style.color = "red"; // Style the message in red
