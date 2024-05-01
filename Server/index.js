@@ -12,7 +12,7 @@ app.use(bodyParser.json());
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 
 const corsOptions = {
-    origin: ["http://127.0.0.1:5500", "https://uderika-main.vercel.app"],
+    origin: ["http://127.0.0.1:5500", "https://uderika-health.vercel.app"],
     credentials: true,
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
