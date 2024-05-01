@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.style.color = "green";
 
             emailInput.value = "";
-            fetch('/Email', {
+            fetch('/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
             emailInput.value = "";
             // Send form data to server
-            fetch('/Email', {
+            fetch('/email', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

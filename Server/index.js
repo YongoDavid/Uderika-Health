@@ -28,7 +28,7 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 
 // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
-app.get('/Email', (req, res) => {
+app.get('/email', (req, res) => {
   // Read the content of the text file
   fs.readFile('emails.txt', 'utf8', (err, data) => {
       if (err) {
@@ -46,7 +46,7 @@ app.get('/Email', (req, res) => {
 });
 
 // Route to handle saving emails
-app.post('/Email', (req, res) => {
+app.post('/email', (req, res) => {
   const email = req.body.email;
   const timestamp = new Date().toDateString();
   const data = `${email} ${timestamp}\n`;
