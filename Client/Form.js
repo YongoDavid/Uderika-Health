@@ -40,7 +40,7 @@
 //     });
 // });
 
-// BOOKS FORM
+// NEWSLETTER FORM
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.querySelector('.join__form');
     form.addEventListener('submit', function(event) {
@@ -54,24 +54,6 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.style.color = "green";
 
             emailInput.value = "";
-            // // Sending form data client to server using fetch api 
-            // fetch('/Email', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json'
-            //     },
-            //     body: JSON.stringify({ email: email })
-            // })
-            // .then(response => {
-            //     if (response.ok) {
-            //         console.log('Email data sent successfully');
-            //     } else {
-            //         console.error('Failed to send email data:', response.status);
-            //     }
-            // })
-            // .catch(error => {
-            //     console.error('Error sending email data:', error);
-            // });
             fetch('/Email', {
                 method: 'POST',
                 headers: {
@@ -101,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+
+// BOOKS FORM 
 document.addEventListener('DOMContentLoaded', function() {
     const bookForm = document.querySelector('.book-form');
     const downloadButtons = document.querySelectorAll('.button2');
@@ -119,6 +103,7 @@ document.addEventListener('DOMContentLoaded', function() {
             messageElement.textContent = "Email sent";
             messageElement.style.color = "green";
 
+            emailInput.value = "";
             // Send form data to server
             fetch('/Email', {
                 method: 'POST',
@@ -139,7 +124,6 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             // Clear email input field
-            emailInput.value = "";
         } else {
             // Display error message for invalid email
             messageElement.textContent = "Please enter a valid email address";
