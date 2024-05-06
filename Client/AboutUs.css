@@ -423,14 +423,21 @@ button{
         display: flex;
     }
     .flex1{
+        align-content: center;
         margin-right: 1em;
     }
-    .part-Main{
+    .flex1 {
         text-align: left;
-        justify-content: left;
     }
-    .flex2{
+    .flex1 > p {
+        text-align: left;
+    }
+    .The__heading h2{
+        text-align: left;
+    }
 
+    .part-Main{
+        
     }
     .Desk_img{
         margin-left: auto;
