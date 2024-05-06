@@ -54,9 +54,12 @@
     /* NEWSLETTER END  */
 }
 @media screen and (min-width: 768px){
-
+    #About__main1{
+        display: flex;
+        flex-direction: row;
+    }
 }
-        /* LARGE SCREEN  */
+       /* LARGE SCREEN  */
 @media screen and (min-width: 1150px){
     .section{
         padding-block: 7rem 2rem;
@@ -197,6 +200,7 @@
         min-width: 250px;
         font-size: 20px;
     }
+
 }
 @media screen and (min-width: 1220px){
  .container{
