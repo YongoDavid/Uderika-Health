@@ -139,24 +139,24 @@
         padding: 35px 30px;
     }
     /* for audio books  */
-    .new__swiper{
+    /* .new__swiper{
 
-    }
+    } */
     /* for audio books  */
-    .new__container{
+    /* .new__container{
 
-    }
+    } */
     .new__swiper:nth-child(1){
         margin-bottom: 0rem;
     }
     /* for pdf books  */
-    .featured__container{
+    /* .featured__container{
 
-    }
+    } */
     /* for pdf books  */
-    .featured__swiper{
+    /* .featured__swiper{
 
-    }
+    } */
     .swiper{
         overflow: hidden;
     }

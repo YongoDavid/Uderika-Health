@@ -155,9 +155,9 @@ button{
 /* banner */
 
 /* ABOUT  MAIN SECTION  */
-#About{
+/* #About{
 
-}   
+}    */
 #About__main1  > .The__heading {
     text-transform: capitalize;
 }
@@ -209,9 +209,9 @@ button{
 .about__content p {
     font-size: 18px;
 }
-.part{
+/* .part{
   
-}
+} */
 .part span{
     font-family: "Montserrat", sans-serif;
     font-size: .938rem;
@@ -436,9 +436,9 @@ button{
         text-align: left;
     }
 
-    .part-Main{
+    /* .part-Main{
         
-    }
+    } */
     .Desk_img{
         margin-left: auto;
         margin-right: auto;

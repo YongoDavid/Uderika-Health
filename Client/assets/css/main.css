@@ -78,6 +78,11 @@ button{
     border: none;
     cursor: pointer;
 }
+/* #Hero_img{
+    position: absolute;
+    max-width: 400px;
+    right: 0.2em;
+} */
 /* .main{
     background-color: rgb(201, 212, 235);
 } */
@@ -400,9 +405,9 @@ button{
     border: 2px solid hsl(230, 70%, 16%);
 }
 /* COME BACK HERE TO ADD A SHADOW  */
-.new__img{
-    /* box-shadow: -5px 5px -10px rgba(0, 0, 0, 0.5); Adds a shadow with x-offset, y-offset, blur radius, and color */
-}
+/* .new__img{
+    box-shadow: -5px 5px -10px rgba(0, 0, 0, 0.5); Adds a shadow with x-offset, y-offset, blur radius, and color
+} */
 .new__title{
     font-size: 1.25rem;
     margin-bottom: .5rem;
