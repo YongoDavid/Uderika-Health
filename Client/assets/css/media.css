@@ -11,10 +11,10 @@
         /* MEDIUM SCREEN  */
 @media screen and (max-width: 450px){
     .featured__card{
-        width: 290px;
+        max-width: 490px;
     }
     .new__card{
-        width: 390px;
+        max-width: 490px;
     }
 }
 @media screen and (min-width: 576px){
@@ -77,7 +77,7 @@
         padding: 1rem;
     }
     .new__img{
-        width: 120px;
+        width: 500px;
     }
     .new__title{
         font-size: 1rem;
@@ -117,7 +117,7 @@
         padding-right: 0px;
         padding-left: 0px;
         /* come back here  */
-        margin-left: 42em;
+        margin-left: 39em;
 
     }
     #Laptop-con .swiper-slide-duplicate{

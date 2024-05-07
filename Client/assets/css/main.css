@@ -323,10 +323,14 @@ button{
     transition: border .4s  , var(--clr-white) , .4s;
 } */
 .featured__img , .new__img{
-    width: 165px;
-    margin: 0 auto .75rem;
-    box-shadow: 1px 1px 10px 5px rgba(175, 173, 173, 0.65);
+    max-width: 300px;
+    justify-content: center;
+    /* margin: 0 auto .75rem; */
+    /* box-shadow: 1px 1px 10px 5px rgba(175, 173, 173, 0.65); */
 }
+/* .featured__img img{
+    width: 500px;
+} */
 .featured__title{
     font-size: 1.25rempx;
     margin-bottom: .5rem;
@@ -395,9 +399,10 @@ button{
 .new__card:hover{
     border: 2px solid hsl(230, 70%, 16%);
 }
-/* .new__img{
-    width: 100px;
-} */
+/* COME BACK HERE TO ADD A SHADOW  */
+.new__img{
+    /* box-shadow: -5px 5px -10px rgba(0, 0, 0, 0.5); Adds a shadow with x-offset, y-offset, blur radius, and color */
+}
 .new__title{
     font-size: 1.25rem;
     margin-bottom: .5rem;
