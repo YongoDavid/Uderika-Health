@@ -163,7 +163,7 @@ button{
 }
 .about__content{
     box-shadow: 10px 40px 50px 0px #e5e9f666;
-    background-color: var(--clr-white);
+    /* background-color: var(--clr-white); */
     width: 100vw; 
     padding: 1rem;
 }
@@ -253,7 +253,7 @@ button{
 }
 
 .footer .navbar-brand .brand-shape{
-    background-color: var(--clr-white);
+    /* background-color: var(--clr-white); */
     color: var(--clr-blue);
 }
 .footer .navbar-brand .brand-text{
@@ -418,13 +418,17 @@ button{
     }
 }
 @media screen and (min-width: 1150px){
+    #About__main1{
+        display: flex;
+        flex-direction: row;
+    }
     #desktop-Flex{
         justify-content: center;
         display: flex;
     }
     .flex1{
         align-content: center;
-        margin-right: 1em;
+        margin-right: 3em;
     }
     .flex1 {
         text-align: left;
@@ -432,16 +436,30 @@ button{
     .flex1 > p {
         text-align: left;
     }
-    .The__heading h2{
-        text-align: left;
+    .flex1 > .The__heading {
+        justify-content: left;
     }
 
+    .Section_desk > .The__heading{ 
+        text-align: left;
+    }
+    .Section_desk  p{ 
+        text-align: left;
+    }
+    .Section_desk button{ 
+        justify-items: left;
+    }
     /* .part-Main{
         
     } */
     .Desk_img{
         margin-left: auto;
         margin-right: auto;
+        width: 500px;
+    }
+    #Desk_img_hero{
+        position: relative;
+        right: 29%;
         width: 500px;
     }
     .The__heading{
