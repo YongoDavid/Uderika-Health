@@ -312,6 +312,9 @@ button{
     .footer-list{
         grid-template-columns: repeat(2, 1fr);
     }
+    #Desk_img_hero{
+        
+    }
 }
 
 @media screen and (max-width: 992px){
