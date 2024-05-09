@@ -75,9 +75,6 @@
 }
        /* LARGE SCREEN  */
 @media screen and (min-width: 1150px){
-    #Hero_img{
-        display: none;
-    }
     .section{
         padding-block: 7rem 2rem;
     }
@@ -180,7 +177,11 @@
     /* ALL BOOKS END  */
 
     /* Landing page  */
-    .banner-title{
+
+    #Hero_img{
+        position: relative;
+    }
+    /* .banner-title{
         margin: 0px;
         margin-top: 2.5em;
         margin-left: auto;
@@ -190,16 +191,17 @@
         font-size: 55px;
         font-family: "Montserrat", sans-serif;
         line-height: 1.166;
-    }
+    } */
     .banner-content{
         margin-left: auto;
         margin-right: auto;
-        display: flex;
+        margin-top: 5em;
+        /* display: flex; */
         text-align: center;
         justify-content: center;
         align-items: center;
     }
-    .banner-left .content-wrapper{
+    /* .banner-left .content-wrapper{
         max-width: 600px;
         margin-left: auto;
     }
@@ -207,11 +209,11 @@
         text-align: center;
         justify-content: center;
         max-width: 600px;
-    }
+    } */
     .banner-left .text{
         font-size: 24px;
-        margin-top: 1em;
-        margin-bottom: 1em;
+        position: relative;
+        left: 2em;
     }
     .btn-secondary{
         min-width: 250px;
