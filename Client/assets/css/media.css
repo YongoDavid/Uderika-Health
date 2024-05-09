@@ -177,7 +177,6 @@
     /* ALL BOOKS END  */
 
     /* Landing page  */
-
     #Hero_img{
         position: relative;
     }
@@ -196,7 +195,6 @@
         margin-left: auto;
         margin-right: auto;
         margin-top: 5em;
-        /* display: flex; */
         text-align: center;
         justify-content: center;
         align-items: center;
