@@ -6,6 +6,9 @@
     .new__card{
         flex-direction: column;
     }
+    #Hero_img{
+        display: none;
+    }
 }
 
         /* MEDIUM SCREEN  */
@@ -16,8 +19,19 @@
     .new__card{
         max-width: 490px;
     }
+    #Hero_img{
+        display: none;
+    }
 }
 @media screen and (min-width: 576px){
+    /* COME BACH HERE
+    HERO SECTION 
+    #Hero_img{
+       width: 500px;
+       height: 250px;
+       position: relative;
+       left:  3em;
+    } */
     /* NEWSLETTER START  */
     .join__container{
         max-width: 900px;
@@ -61,6 +75,9 @@
 }
        /* LARGE SCREEN  */
 @media screen and (min-width: 1150px){
+    #Hero_img{
+        display: none;
+    }
     .section{
         padding-block: 7rem 2rem;
     }
