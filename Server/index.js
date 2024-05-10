@@ -50,8 +50,9 @@ app.post('/email', (req, res) => {
   const email = req.body.email;
   const timestamp = new Date().toDateString();
   const data = `${email} , ${timestamp}\n`;
-
-  fs.appendFile('emails.txt', data, (err) => {
+  const filePath = path.join(__dirname, 'emails.txt');
+  
+  fs.appendFile(filePath, data, (err) => {
     if (err) {
       console.error('Error saving email:', err);
       res.status(500).send('Error saving email');
