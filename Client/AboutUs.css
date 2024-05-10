@@ -465,12 +465,13 @@ button{
         box-shadow: 10px 10px 20px 10px #b0b0b066;
         margin-left: auto;
         margin-right: auto;
-        width: 500px;
+        width: 600px;
     }
     #Desk_img_hero{
         position: relative;
         right: 29%;
-        width: 500px;
+        width: 600px;
+        height: 400px;
     }
     .The__heading{
         max-width: 500px;
