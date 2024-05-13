@@ -12,7 +12,8 @@ app.use(bodyParser.json());
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 
 const corsOptions = {
-    origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-admin.onrender.com"],
+    // ADDED THE SERVER URL 
+    origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com" , "https://uderika-admin.onrender.com"],
     credentials: true,
     methods: ['GET', 'POST'], // Allowed HTTP methods
     allowedHeaders: ['Content-Type', 'Authorization'] // Allowed headers
@@ -30,7 +31,8 @@ app.use(express.static(path.join(__dirname, '../Client')));
 // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
 app.get('/email', (req, res) => {
   // Read the content of the text file
-  fs.readFile('emails.txt', 'utf8', (err, data) => {
+    // ADDED NEW PATH HERE 
+  fs.readFile('Server/emails.txt', 'utf8', (err, data) => {
       if (err) {
           console.error('Error reading file:', err);
           res.status(500).send('Error reading file');
