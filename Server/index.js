@@ -31,8 +31,7 @@ app.use(express.static(path.join(__dirname, '../Client')));
 // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
 app.get('/email', (req, res) => {
   // Read the content of the text file
-    // ADDED NEW PATH HERE 
-  fs.readFile('Server/emails.txt', 'utf8', (err, data) => {
+  fs.readFile('emails.txt', 'utf8', (err, data) => {
       if (err) {
           console.error('Error reading file:', err);
           res.status(500).send('Error reading file');
