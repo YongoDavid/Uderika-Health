@@ -1,4 +1,5 @@
 const express = require('express')
+const mongoose = require('mongoose')
 const fs = require('fs');
 const morgan = require('morgan');
 require('dotenv').config()
@@ -9,8 +10,25 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-// USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
+// GOING BACK TO CLOUD DATBASE WITH MONGOOSE 
+const ConnectUri = 'mongodb+srv://admin:UderikaEmail@uderikaemails.hvagnng.mongodb.net/';
 
+// CONNECT TO MONGODB 
+mongoose.connect(ConnectUri , {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// CONNECTION INSTANCE 
+const db = mongoose.connect();
+b.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', () => {
+    console.log('Connected to MongoDB');
+});
+
+// CREATE MODEL AND SCHEMA 
+
+// USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 const corsOptions = {
     // ADDED THE SERVER URL 
     origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com" , "https://uderika-admin.onrender.com"],
