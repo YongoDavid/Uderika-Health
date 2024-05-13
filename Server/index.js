@@ -6,6 +6,7 @@ require('dotenv').config()
 const bodyParser = require('body-parser')
 const path = require('path');
 const cors = require('cors');
+const { timeStamp } = require('console');
 const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
@@ -27,6 +28,12 @@ db.once('open', () => {
 });
 
 // CREATE MODEL AND SCHEMA 
+const  UderikaSchema = new mongoose.Schema({
+  email: String,
+  created: {type: Date , default: Date.now}
+});
+
+let Emails = mongoose.model("Emails" , UderikaSchema);
 
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 const corsOptions = {
