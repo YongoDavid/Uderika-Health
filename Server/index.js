@@ -13,7 +13,8 @@ app.use(morgan('dev'));
 app.use(bodyParser.json());
 
 // GOING BACK TO CLOUD DATBASE WITH MONGOOSE 
-const ConnectUri = 'mongodb+srv://admin:${process.env.MONGODB_PASSWORD}@uderikaemails.hvagnng.mongodb.net/';
+const ConnectUri = 'mongodb+srv://admin:UderikaEmail@uderikaemails.hvagnng.mongodb.net/';
+// ${process.env.MONGODB_PASSWORD}
 
 // CONNECT TO MONGODB 
 mongoose.connect(ConnectUri , {
