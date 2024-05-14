@@ -79,6 +79,18 @@ app.post('/email' , (req,res) => {
   });
 });
 
+// Handle GET requests to '/api/emails' endpoint
+app.get('/api/emails', (req, res) => {
+  Email.find({})
+    .then(emails => {
+      res.json(emails);
+    })
+    .catch(error => {
+      console.error('Error fetching emails:', error);
+      res.status(500).json({ error: 'Internal server error' });
+    });
+});
+
 
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 const corsOptions = {
