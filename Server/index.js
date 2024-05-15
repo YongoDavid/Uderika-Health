@@ -12,6 +12,23 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
+// USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
+const corsOptions = {
+    // ADDED THE SERVER URL "http://127.0.0.1:5500"
+    origin: ["https://uderika-health.onrender.com" , "https://uderika-server.onrender.com", "https://uderika-admin.onrender.com"],
+    credentials: true,
+    methods: ['GET', 'POST'],
+    allowedHeaders: ['Content-Type', 'Authorization']                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+};
+
+app.use(cors(corsOptions));
+app.use(express.json());
+app.use((req,res, next)=>{
+  console.log('Server running on LIVE')
+  next();
+});
+app.use(express.static(path.join(__dirname, '../Client')));
+
 // GOING BACK TO CLOUD DATBASE WITH MONGOOSE 
 const ConnectUri = 'mongodb+srv://admin:UderikaEmail@uderikaemails.hvagnng.mongodb.net/';
 // ${process.env.MONGODB_PASSWORD}
@@ -90,24 +107,6 @@ app.get('/api/emails', (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     });
 });
-
-
-// USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
-const corsOptions = {
-    // ADDED THE SERVER URL 
-    origin: ["http://127.0.0.1:5500" , "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com", "https://uderika-admin.onrender.com"],
-    credentials: true,
-    methods: ['GET', 'POST'],
-    allowedHeaders: ['Content-Type', 'Authorization']
-};
-
-app.use(cors(corsOptions));
-app.use(express.json());
-app.use((req,res, next)=>{
-  console.log('Server running on LIVE')
-  next();
-});
-app.use(express.static(path.join(__dirname, '../Client')));
 
 
 // // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
