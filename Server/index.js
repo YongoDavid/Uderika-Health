@@ -82,7 +82,7 @@ app.post('/email' , (req,res) => {
   }
 
   // CREATE A NEW INSTANCE WITH THE EMAIL RECEIVED 
-  const newEmail = new Email({ email });
+  const newEmail = new Email({ email, timestamp: new Date() }); // Include timestamp when saving email
 
   // Save the new email document to the database
   newEmail.save()
