@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 const corsOptions = {
     // ADDED THE SERVER URL "http://127.0.0.1:5500"
-    origin: ["https://uderika-health.onrender.com" , "https://uderika-server.onrender.com", "https://uderika-admin.onrender.com"],
+    origin: [ "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com", "https://uderika-admin.onrender.com"],
     credentials: true,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']                                                                                                                                                                                                                                                                                                                                                                                                                                                               
@@ -82,6 +82,7 @@ app.post('/email' , (req,res) => {
   }
 
   // CREATE A NEW INSTANCE WITH THE EMAIL RECEIVED 
+  // const newEmail = new Email({ email });
   const newEmail = new Email({ email, timestamp: new Date() }); // Include timestamp when saving email
 
   // Save the new email document to the database
@@ -99,9 +100,8 @@ app.post('/email' , (req,res) => {
 // Handle GET requests to '/api/emails' endpoint
 app.get('/api/emails', (req, res) => {
   Email.find({})
-    .then(newEmail => {
-      // res.json(emails);
-       res.json(newEmail);
+    .then(emails => {
+      res.json(emails);
     })
     .catch(error => {
       console.error('Error fetching emails:', error);
