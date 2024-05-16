@@ -164,7 +164,7 @@ button{
 .about__content{
     /* box-shadow: 10px 40px 50px 0px #e5e9f666; */
     background-color: var(--clr-white);
-    width: 100vw; 
+    /* width: 100vw;  */
     padding: 1rem;
 }
 
@@ -429,7 +429,7 @@ button{
         display: flex;
         flex-direction: row;
     }
-    #desktop-Flex{
+    .desktop-Flex{
         justify-content: center;
         display: flex;
     }
@@ -444,7 +444,7 @@ button{
         text-align: left;
     }
     .flex1 > .The__heading {
-        justify-content: left;
+        /* justify-content: left; */
     }
 
     .Section_desk > .The__heading{ 
@@ -465,11 +465,6 @@ button{
         box-shadow: 10px 10px 20px 10px #b0b0b066;
         margin-left: auto;
         margin-right: auto;
-        width: 600px;
-    }
-    #Desk_img_hero{
-        position: relative;
-        right: 29%;
         width: 600px;
         height: 400px;
     }
