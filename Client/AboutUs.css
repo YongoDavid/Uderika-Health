@@ -7,7 +7,8 @@
     --clr-gray: #7d7987;
     --clr-dark-blue: #233348;
     --clr-dark-purple: #1f1534;
-    --font-family-mulish: 'Mulish', sans-serif;
+    /* --font-family-mulish: 'Mulish', sans-serif; */
+    --font-family-mulish: "Montserrat", sans-serif;
     --transition-default: all 300ms ease-in-out;
 }
 html{
@@ -17,6 +18,7 @@ html{
     text-rendering: optimizeLegibility;
     -webkit-text-size-adjust: 100%;
 }
+
 *,
 *::before,
 *::after{
@@ -158,6 +160,9 @@ button{
 /* #About{
 
 }    */
+#About__main1{
+    background-color: whitesmoke;
+}
 #About__main1  > .The__heading {
     text-transform: capitalize;
 }
@@ -420,8 +425,78 @@ button{
         width: 100%;
     }
 }
+/* NEW DESKTOP VIEW   */
+
 @media screen and (min-width: 1150px){
+
     .About__main{
+       /* padding-left: 8em;
+       padding-right: 8em; */
+       padding: 4em 6em 4em 6em;
+    }
+
+    .Desk_img{
+        width: 1000px;
+    }
+    #About__main1{
+        background-color: whitesmoke;
+    }
+    .desktop-Flex{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+    .flex1 > .The__heading {
+        justify-content: left;
+        text-align: left;
+        font-size: 40px;
+        margin-bottom: 0.5em;
+        font-weight: 800;
+    }
+    
+    .flex1 > .part-Main{
+        justify-content: left;
+        text-align: left;
+        font-size: 23px;
+        font-weight: 400;
+        /* max-width: 25em;  */
+    }
+
+    .flex1 > button{
+       
+    }
+    .flex1 > a > button{
+       
+    }
+    .part span{
+        font-size: 20px;
+        margin-bottom: 0.5em;
+        font-weight: 800;
+    }
+    .part p{
+        font-size: 20px;
+        margin-bottom: 0.5em;
+        font-weight: 400;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 1150px){
+    /* .About__main{
         margin-top: 4em;
         margin-bottom: 3em;
     }
@@ -443,10 +518,6 @@ button{
     .flex1 > p {
         text-align: left;
     }
-    .flex1 > .The__heading {
-        /* justify-content: left; */
-    }
-
     .Section_desk > .The__heading{ 
         text-align: left;
     }
@@ -457,9 +528,6 @@ button{
         position: relative;
         right: 11.5em;
     }
-    /* .part-Main{
-        
-    } */
     .Desk_img{
         opacity: 1;
         box-shadow: 10px 10px 20px 10px #b0b0b066;
@@ -498,5 +566,5 @@ button{
     }
     .part p {
         font-size: 20px;
-    }
+    } */
 }
