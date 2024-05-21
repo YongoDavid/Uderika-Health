@@ -78,14 +78,6 @@ button{
     border: none;
     cursor: pointer;
 }
-/* #Hero_img{
-    position: absolute;
-    max-width: 400px;
-    right: 0.2em;
-} */
-/* .main{
-    background-color: rgb(201, 212, 235);
-} */
 #stroke{
     display: flex;
     flex-direction: row;
@@ -112,7 +104,6 @@ button{
     max-width: 1220px;
     margin-inline: 1.5rem;
 }
-
 /* come back here  */
 .grid {
     display: grid;
@@ -164,13 +155,11 @@ button{
     position: relative;
     min-height: 100vh;
     background-color: var(--clr-black);
-    /* background-color: var(--clr-blue); */
 }
 .header *{
     color: var(--clr-white);
 }
 .navbar{
-    /* padding: 56px 0 80px 0; */
     padding: 20px 0 20px 0;
     background-color: var(--clr-black);
 }
@@ -275,36 +264,10 @@ button{
 }
 /* swiper class  */
 .swiper-slide-active , .swiper-slide-duplicate-active{
-    /* scale: 1; */
     transform: scale(1);
-    /* come back to this  */
-    /* display: flex; */
     justify-content: center;
     align-items: center;
 }
-/* SERVICES */
-/* .sc-services{
-    padding-top: 179px;
-    padding-bottom: 115.9px;
-    position: relative;
-    overflow: hidden;
-}
-.sc-services .content-wrapper{
-    max-width: 670px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.sc-services .content-wrapper .text{
-    line-height: 1.6667;
-}
-
-.services-shape{
-    position: absolute;
-    z-index: -1;
-    top: 290px;
-    left: -70px;
-} */
-
 /* HOME BUTTON  */
 .button{
     display: inline-flex;
@@ -318,24 +281,10 @@ button{
 }
 /* FEATURED SECTION  */
 /* CAUROSEL START HERE */
-/* .featured__card{
-    position: relative;
-    text-align: center;
-    background-color: white;
-    padding: 2rem;
-    overflow: hidden;
-    border: 2px solid hsl(230, 50%, 90%);
-    transition: border .4s  , var(--clr-white) , .4s;
-} */
 .featured__img , .new__img{
     max-width: 300px;
     justify-content: center;
-    /* margin: 0 auto .75rem; */
-    /* box-shadow: 1px 1px 10px 5px rgba(175, 173, 173, 0.65); */
 }
-/* .featured__img img{
-    width: 500px;
-} */
 .featured__title{
     font-size: 1.25rempx;
     margin-bottom: .5rem;
@@ -378,7 +327,6 @@ button{
     width: initial;
     height: initial;
     background-color: white;
-    /* border: 2px solid rgb(238, 238, 238);  */
     padding: .5rem;
     font-size: 1.5rem;
     color: white;
@@ -405,9 +353,6 @@ button{
     border: 2px solid hsl(230, 70%, 16%);
 }
 /* COME BACK HERE TO ADD A SHADOW  */
-/* .new__img{
-    box-shadow: -5px 5px -10px rgba(0, 0, 0, 0.5); Adds a shadow with x-offset, y-offset, blur radius, and color
-} */
 .new__title{
     font-size: 1.25rem;
     margin-bottom: .5rem;
@@ -457,7 +402,6 @@ button{
     color: white;
 }
 /* NEW BOOK / GUIDES SECTION  END */
-/* grid block one */
 .grid-content .content-wrapper{
     max-width: 360px;
 }
@@ -480,7 +424,6 @@ button{
 /* grid one */
 .sc-grid-one{
     padding: 115.5px 0 114.5px 0;
-    /* background-color: var(--clr-blue); */
     background-color: var(--clr-black);
 }
 .sc-grid-one .grid-content .title-box .title-separator{
@@ -514,7 +457,6 @@ button{
 /* feed back section  */
 .feedback-content{
     max-width: 1120px;
-    /* background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%); */
     background: var(--clr-black);
     border-radius: 24px;
     margin-right: auto;
@@ -729,8 +671,6 @@ article{
 }
 .join__form{
     display: grid;
-    /* row-gap: 1rem; */
-    /* margin: 0 1rem 0 1rem; */
 }
 .join__input{
     padding: 1rem 1rem;
@@ -769,11 +709,9 @@ article{
 }
 /* NEWS LETTER SECTION END  */
 
-
 /* footer */
 .footer{
     margin-top: 136.6px;
-    /* background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%); */
     background: var(--clr-black);
     padding-top: 118px;
     padding-bottom: 109px;
@@ -1117,27 +1055,6 @@ article{
 }
 
 @media screen and (min-width: 768px ){
-    /* .home__container{
-        grid-template-columns: 580px;
-    }
-
-    .home__data{
-        width: 420px;
-        justify-self: center;
-    } */
-    /* .banner{
-        justify-content: center;
-        text-align: center;
-    }
-   
-    .banner-content{
-        justify-content: center;
-        text-align: center;
-    }
-    .content-wrapper{
-        justify-content: center;
-        text-align: center;
-    } */
     
 }
 
