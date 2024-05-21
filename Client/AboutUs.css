@@ -317,9 +317,6 @@ button{
     .footer-list{
         grid-template-columns: repeat(2, 1fr);
     }
-    #Desk_img_hero{
-        
-    }
 }
 
 @media screen and (max-width: 992px){
@@ -430,13 +427,20 @@ button{
 @media screen and (min-width: 1150px){
 
     .About__main{
+        font-family: "Roboto", sans-serif;
        /* padding-left: 8em;
        padding-right: 8em; */
        padding: 4em 6em 4em 6em;
     }
 
     .Desk_img{
-        width: 1000px;
+        padding: 40px;
+        /* max-width: 600px; */
+        /* max-height: 500px; */
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 600px;
+        max-height: 400px;
     }
     #About__main1{
         background-color: whitesmoke;
@@ -445,6 +449,7 @@ button{
         display: flex;
         flex-direction: row;
         justify-content: center;
+        align-items: center;
         width: 100%;
     }
     .flex1 > .The__heading {
@@ -452,32 +457,47 @@ button{
         text-align: left;
         font-size: 40px;
         margin-bottom: 0.5em;
-        font-weight: 800;
+        font-weight: 700;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
     }
     
     .flex1 > .part-Main{
+        font-family: "Roboto", sans-serif;
+        font-weight: 500;
+        font-style: normal;
         justify-content: left;
         text-align: left;
-        font-size: 23px;
-        font-weight: 400;
-        /* max-width: 25em;  */
+        font-size: 20px;
+        font-weight: 500;
     }
-
+    
     .flex1 > button{
-       
+        position: relative;
+        right: 16em;
     }
-    .flex1 > a > button{
-       
+    .flex1 > a button{
+       position: relative;
+       right: 16em;
     }
     .part span{
-        font-size: 20px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-size: 22px;
         margin-bottom: 0.5em;
-        font-weight: 800;
+        font-weight: 700;
     }
     .part p{
-        font-size: 20px;
+        font-size: 21px;
         margin-bottom: 0.5em;
-        font-weight: 400;
+        font-weight: 500;
+        color: #42474c;
+    }
+    .About__main p{
+        font-size: 21px;
+        margin-bottom: 0.5em;
+        font-weight: 500;
+        color: #42474c;
     }
 }
 
