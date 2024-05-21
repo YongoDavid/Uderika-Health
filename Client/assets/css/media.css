@@ -177,9 +177,9 @@
     /* ALL BOOKS END  */
 
     /* Landing page  */
-    #Hero_img{
+    /* #Hero_img{
         position: relative;
-    }
+    } */
     /* .banner-title{
         margin: 0px;
         margin-top: 2.5em;
@@ -194,24 +194,27 @@
     .banner-content{
         margin-left: auto;
         margin-right: auto;
+        display: flex;
         margin-top: 5em;
         text-align: center;
         justify-content: center;
         align-items: center;
     }
-    /* .banner-left .content-wrapper{
-        max-width: 600px;
-        margin-left: auto;
+    .banner-left .content-wrapper{
+        /* max-width: 600px;
+        margin-left: auto; */
     }
     .banner-left .content-wrapper p{
         text-align: center;
         justify-content: center;
         max-width: 600px;
-    } */
+    }
     .banner-left .text{
         font-size: 24px;
-        position: relative;
-        left: 2em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        /* position: relative;
+        left: 2em; */
     }
     .btn-secondary{
         min-width: 250px;
