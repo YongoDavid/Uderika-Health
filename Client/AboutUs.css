@@ -7,7 +7,6 @@
     --clr-gray: #7d7987;
     --clr-dark-blue: #233348;
     --clr-dark-purple: #1f1534;
-    /* --font-family-mulish: 'Mulish', sans-serif; */
     --font-family-mulish: "Montserrat", sans-serif;
     --transition-default: all 300ms ease-in-out;
 }
@@ -153,13 +152,6 @@ button{
 .shadow-header{
     box-shadow: 0 2px 16px hsla(0, 0%, 0%, .1);
 }
-/* hero section and content  */
-/* banner */
-
-/* ABOUT  MAIN SECTION  */
-/* #About{
-
-}    */
 #About__main1{
     background-color: whitesmoke;
 }
@@ -214,9 +206,7 @@ button{
 .about__content p {
     font-size: 18px;
 }
-/* .part{
-  
-} */
+
 .part span{
     font-family: "Montserrat", sans-serif;
     font-size: .938rem;
@@ -246,7 +236,6 @@ button{
 /* footer */
 .footer{
     margin-top: 136.6px;
-    /* background: linear-gradient(183.41deg, #67c3f3 -8.57%, #5a98f2 82.96%); */
     background: var(--clr-black);
     padding-top: 118px;
     padding-bottom: 109px;
@@ -258,7 +247,6 @@ button{
 }
 
 .footer .navbar-brand .brand-shape{
-    /* background-color: var(--clr-white); */
     color: var(--clr-blue);
 }
 .footer .navbar-brand .brand-text{
@@ -435,8 +423,6 @@ button{
 
     .Desk_img{
         padding: 40px;
-        /* max-width: 600px; */
-        /* max-height: 500px; */
         margin-left: auto;
         margin-right: auto;
         max-width: 600px;
@@ -451,6 +437,9 @@ button{
         justify-content: center;
         align-items: center;
         width: 100%;
+    }
+    .flex1{
+        text-align: left;
     }
     .flex1 > .The__heading {
         justify-content: left;
@@ -472,14 +461,6 @@ button{
         font-weight: 500;
     }
     
-    .flex1 > button{
-        position: relative;
-        right: 16em;
-    }
-    .flex1 > a button{
-       position: relative;
-       right: 16em;
-    }
     .part span{
         font-family: "Roboto", sans-serif;
         font-style: normal;
