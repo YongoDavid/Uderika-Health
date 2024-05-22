@@ -63,15 +63,6 @@ const emailSchema = new mongoose.Schema({
 // CREATE MODEL 
 const Email = mongoose.model('Email', emailSchema);
 
-// STOPPED HERE THERE ARE ERRORS THAT NEED ATTENTION 
-// Assuming you receive email data from the client side
-// const emailData = {
-//   email: 'uderiak@gmail.com', // Replace with the actual email received from the client
-// };
-
-// Create a new Email document
-
-
 // HANDLE POST REQUEST 
 app.post('/email' , (req,res) => {
   const { email } = req.body;
@@ -108,44 +99,6 @@ app.get('/api/emails', (req, res) => {
       res.status(500).json({ error: 'Internal server error' });
     });
 });
-
-
-// // AND ACCESS THE EMAILS THROUGH THIS ROUTE ON THE HOSTED LINK 
-// app.get('/email', (req, res) => {
-//   // Read the content of the text file
-//   fs.readFile('emails.txt', 'utf8', (err, data) => {
-//       if (err) {
-//           console.error('Error reading file:', err);
-//           res.status(500).send('Error reading file');
-//       } else{
-//         // parse the data an array of emails 
-//         const emails = data.trim().split('\n').map(line => {
-//           const [email, date] = line.split('   Date:');
-//           return { email, date };
-//         });
-//         res.json(emails);
-//       }
-//   });
-// });
-
-// // Route to handle saving emails
-// app.post('/email', (req, res) => {
-//   const email = req.body.email;
-//   const timestamp = new Date().toDateString();
-//   const data = `${email} , ${timestamp}\n`;
-//   const filePath = path.join(__dirname, 'emails.txt');
-
-//   fs.appendFile(filePath, data, (err) => {
-//     if (err) {
-//       console.error('Error saving email:', err);
-//       res.status(500).send('Error saving email');
-//     } else {
-//       console.log('Email saved:', email);
-//       res.sendStatus(200);
-//     }
-//   });
-// });
-
 
 // START THE SERVER  
 const PORT = process.env.PORT || 5500;
