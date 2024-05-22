@@ -1,12 +1,10 @@
 const express = require('express');
 const mongoose = require('mongoose');
-// const fs = require('fs');
 const morgan = require('morgan');
 require('dotenv').config()
 const bodyParser = require('body-parser')
 const path = require('path');
 const cors = require('cors');
-const { timeStamp } = require('console');
 
 const app = express();
 app.use(morgan('dev'));
@@ -14,7 +12,6 @@ app.use(bodyParser.json());
 
 // USING FS (FILE SYSTEM FOR THIS INSTEAD OF DATABSE ) 
 const corsOptions = {
-    // ADDED THE SERVER URL "http://127.0.0.1:5500"
     origin: [ "https://uderika-health.onrender.com" , "https://uderika-server.onrender.com", "https://uderika-admin.onrender.com"],
     credentials: true,
     methods: ['GET', 'POST'],
@@ -31,7 +28,6 @@ app.use(express.static(path.join(__dirname, '../Client')));
 
 // GOING BACK TO CLOUD DATBASE WITH MONGOOSE 
 const ConnectUri = 'mongodb+srv://admin:UderikaEmail@uderikaemails.hvagnng.mongodb.net/';
-// ${process.env.MONGODB_PASSWORD}
 
 // CONNECT TO MONGODB 
 mongoose.connect(ConnectUri , {
@@ -72,8 +68,7 @@ app.post('/email' , (req,res) => {
     return res.status(400).json({error: 'Email required'});
   }
 
-  // CREATE A NEW INSTANCE WITH THE EMAIL RECEIVED 
-  // const newEmail = new Email({ email });
+  // CREATE A NEW INSTANCE WITH THE EMAIL RECEIVED
   const newEmail = new Email({ email, timestamp: new Date() }); // Include timestamp when saving email
 
   // Save the new email document to the database
